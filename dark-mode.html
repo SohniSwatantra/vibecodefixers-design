@@ -83,18 +83,13 @@
         @keyframes tracePulse { 0%{stroke-dashoffset:0} 100%{stroke-dashoffset:-48} }
 
         /* AS SEEN IN — logo bar */
-        .seen-in-section { padding:20px 0 24px; overflow:hidden; background:var(--bg-primary); }
-        .seen-in-label { text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-tertiary); margin-bottom:16px; font-weight:600; }
-        .seen-in-logos { display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap; }
-        .seen-in-logo { display:inline-flex; align-items:center; gap:6px; opacity:0.4; transition:opacity 0.3s; text-decoration:none; }
-        .seen-in-logo:hover { opacity:0.8; }
-        .seen-in-logo .logo-icon-hn { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#FF6600; border-radius:3px; color:#fff; font-family:var(--font-heading); font-size:14px; font-weight:700; }
-        .seen-in-logo .logo-text { font-family:var(--font-heading); font-size:14px; font-weight:600; color:var(--text-secondary); }
-        .seen-in-logo .logo-text-bold { font-family:var(--font-heading); font-size:15px; font-weight:700; color:var(--text-secondary); }
-        .seen-in-logo .logo-icon-yc { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#FF6600; border-radius:50%; color:#fff; font-family:var(--font-heading); font-size:13px; font-weight:700; }
-        .seen-in-logo .logo-404 { font-family:var(--font-heading); font-size:15px; font-weight:700; color:var(--text-secondary); letter-spacing:-0.02em; }
-        .seen-in-logo .logo-indeed { font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--text-secondary); letter-spacing:-0.02em; }
-        .seen-in-logo .logo-ph { font-family:var(--font-heading); font-size:14px; font-weight:600; color:var(--text-secondary); }
+        .seen-in-section { padding:28px 0 32px; overflow:hidden; background:var(--bg-primary); }
+        .seen-in-label { text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-tertiary); margin-bottom:20px; font-weight:600; }
+        .seen-in-logos { display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap; padding:0 24px; }
+        .seen-in-logo { display:inline-flex; align-items:center; gap:8px; opacity:0.45; transition:opacity 0.3s; text-decoration:none; }
+        .seen-in-logo:hover { opacity:0.9; }
+        .seen-in-logo svg { height:28px; width:auto; }
+        .seen-in-logo .logo-text-label { font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--text-secondary); }
         @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
         /* SECTIONS */
@@ -339,13 +334,26 @@
     <div class="seen-in-section">
         <p class="seen-in-label">As seen in</p>
         <div class="seen-in-logos">
-            <a href="#" class="seen-in-logo"><span class="logo-icon-hn">Y</span><span class="logo-text-bold">Hacker News</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-icon-yc">Y</span><span class="logo-text">YCombinator</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-404">404 MEDIA</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-indeed">indeed</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-ph">Product Hunt</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-text">Dev.to</span></a>
-            <a href="#" class="seen-in-logo"><span class="logo-text">Reddit</span></a>
+            <!-- Hacker News -->
+            <a href="#" class="seen-in-logo">
+                <svg height="28" viewBox="0 0 180 28" fill="none"><rect width="28" height="28" rx="3" fill="#FF6600"/><text x="14" y="20" text-anchor="middle" fill="#fff" font-family="'Space Grotesk',sans-serif" font-size="18" font-weight="700">Y</text><text x="40" y="20" fill="#B5B5B5" font-family="'Space Grotesk',sans-serif" font-size="17" font-weight="700">Hacker News</text></svg>
+            </a>
+            <!-- YCombinator -->
+            <a href="#" class="seen-in-logo">
+                <svg height="28" viewBox="0 0 170 28" fill="none"><rect width="28" height="28" rx="4" fill="#FF6600"/><text x="14" y="20" text-anchor="middle" fill="#fff" font-family="'Space Grotesk',sans-serif" font-size="18" font-weight="700">Y</text><text x="40" y="20" fill="#B5B5B5" font-family="'Space Grotesk',sans-serif" font-size="15" font-weight="600">Combinator</text></svg>
+            </a>
+            <!-- 404 Media -->
+            <a href="#" class="seen-in-logo">
+                <svg height="28" viewBox="0 0 130 28" fill="none"><text x="0" y="21" fill="#B5B5B5" font-family="'Space Grotesk',sans-serif" font-size="19" font-weight="700" letter-spacing="-0.5">404 MEDIA</text></svg>
+            </a>
+            <!-- Indeed -->
+            <a href="#" class="seen-in-logo">
+                <svg height="28" viewBox="0 0 100 28" fill="none"><text x="0" y="22" fill="#2557A7" font-family="'Space Grotesk',sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">indeed</text></svg>
+            </a>
+            <!-- Reddit -->
+            <a href="#" class="seen-in-logo">
+                <svg height="28" viewBox="0 0 120 28" fill="none"><circle cx="14" cy="14" r="13" fill="#FF4500"/><text x="10" y="19" fill="#fff" font-family="'Space Grotesk',sans-serif" font-size="14" font-weight="700">r/</text><text x="32" y="21" fill="#B5B5B5" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="700">Reddit</text></svg>
+            </a>
         </div>
     </div>
 
