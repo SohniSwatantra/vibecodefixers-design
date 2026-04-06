@@ -186,10 +186,12 @@
         /* WHY CHOOSE */
         .why-choose { background:var(--bg-primary); }
         .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-        .why-card { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); padding:32px 28px; transition:all 0.35s cubic-bezier(0.16,1,0.3,1); }
-        .why-card:hover { border-color:var(--green-border); box-shadow:0 0 24px rgba(12,182,8,0.1), 0 0 40px rgba(255,200,255,0.08); transform:translateY(-4px); background:linear-gradient(135deg, #fff 60%, rgba(255,240,255,0.4)); }
-        .why-icon { width:44px; height:44px; border-radius:var(--r-sm); background:var(--green-muted); border:1px solid var(--green-border); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-size:20px; }
-        .why-card h3 { font-size:17px; font-weight:600; margin-bottom:8px; }
+        .why-card { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); overflow:hidden; transition:all 0.35s cubic-bezier(0.16,1,0.3,1); box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+        .why-card:hover { border-color:var(--green-border); box-shadow:0 0 24px rgba(12,182,8,0.1), 0 0 40px rgba(255,200,255,0.08); transform:translateY(-4px); }
+        .why-card-graphic { height:200px; position:relative; overflow:hidden; background:var(--bg-elevated); border-bottom:1px solid var(--border); }
+        .why-card-graphic svg { width:100%; height:100%; }
+        .why-card-content { padding:24px 24px 28px; }
+        .why-card h3 { font-size:17px; font-weight:600; margin-bottom:8px; color:var(--black); }
         .why-card p { font-size:14px; color:var(--text-secondary); line-height:1.7; }
 
         /* TESTIMONIALS */
@@ -490,9 +492,110 @@
                 <p>Fully functional, bug free and secured. Tooth Pain? Dentist. Car broken? Mechanic. Code broken? VibeCodeFixers. Trust Professionals.</p>
             </div>
             <div class="why-grid">
-                <div class="why-card reveal reveal-delay-1"><div class="why-icon">&#128295;</div><h3>Bug Fixing</h3><p>Expert developers identify and fix critical issues in your code with surgical precision and rapid response times.</p></div>
-                <div class="why-card reveal reveal-delay-2"><div class="why-icon">&#128274;</div><h3>Security Analysis</h3><p>Comprehensive vulnerability assessments and security improvements to protect your application from threats.</p></div>
-                <div class="why-card reveal reveal-delay-3"><div class="why-icon">&#128640;</div><h3>Deployment &amp; Launch</h3><p>Seamless deployment services ensuring your application launches flawlessly across all environments and platforms.</p></div>
+                <!-- BUG FIXING -->
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-card-graphic">
+                        <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                            <pattern id="wg1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(0,0,0,0.03)"/></pattern>
+                            <rect width="400" height="200" fill="url(#wg1)"/>
+                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="rgba(12,182,8,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M0 100 H30 V150 Q30 160 40 160 H80" stroke="rgba(12,182,8,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M310 0 V30 Q310 40 320 40 H370" stroke="rgba(12,182,8,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="#0CB608" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="8 16"><animate attributeName="stroke-dashoffset" from="0" to="-48" dur="3s" repeatCount="indefinite"/></path>
+                            <circle cx="50" cy="60" r="2" fill="#0CB608" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></circle>
+                            <rect x="100" y="24" width="200" height="152" rx="8" stroke="rgba(0,0,0,0.1)" stroke-width="1" fill="none"/>
+                            <rect x="106" y="30" width="188" height="140" rx="5" stroke="rgba(0,0,0,0.05)" stroke-width="0.8" fill="none"/>
+                            <line x1="106" y1="48" x2="294" y2="48" stroke="rgba(0,0,0,0.06)"/>
+                            <circle cx="118" cy="39" r="3" stroke="rgba(0,0,0,0.12)" fill="none"/><circle cx="128" cy="39" r="3" stroke="rgba(0,0,0,0.12)" fill="none"/><circle cx="138" cy="39" r="3" stroke="rgba(0,0,0,0.12)" fill="none"/>
+                            <rect x="118" y="58" width="50" height="5" rx="2" fill="rgba(12,182,8,0.2)"/>
+                            <rect x="174" y="58" width="70" height="5" rx="2" fill="rgba(0,0,0,0.07)"/>
+                            <rect x="118" y="72" width="35" height="5" rx="2" fill="rgba(0,0,0,0.05)"/>
+                            <rect x="158" y="72" width="60" height="5" rx="2" fill="rgba(0,0,0,0.07)"/>
+                            <rect x="112" y="86" width="176" height="18" rx="3" fill="rgba(220,38,38,0.04)" stroke="rgba(220,38,38,0.1)"/>
+                            <rect x="118" y="92" width="40" height="5" rx="2" fill="rgba(220,38,38,0.2)"/>
+                            <rect x="164" y="92" width="60" height="5" rx="2" fill="rgba(0,0,0,0.05)"/>
+                            <line x1="118" y1="94.5" x2="224" y2="94.5" stroke="rgba(220,38,38,0.3)" stroke-width="0.7"/>
+                            <rect x="112" y="110" width="176" height="18" rx="3" fill="rgba(12,182,8,0.03)" stroke="rgba(12,182,8,0.1)"/>
+                            <text x="116" y="122" fill="#0CB608" font-size="10" font-family="monospace" opacity="0.4">+</text>
+                            <rect x="128" y="116" width="40" height="5" rx="2" fill="rgba(12,182,8,0.25)"/>
+                            <rect x="174" y="116" width="70" height="5" rx="2" fill="rgba(0,0,0,0.07)"/>
+                            <line x1="106" y1="136" x2="294" y2="136" stroke="rgba(0,0,0,0.04)"/>
+                            <text x="116" y="152" fill="rgba(12,182,8,0.4)" font-size="9" font-family="monospace">&#10003;</text>
+                            <rect x="130" y="146" width="80" height="4" rx="2" fill="rgba(12,182,8,0.1)"/>
+                            <text x="116" y="164" fill="rgba(12,182,8,0.4)" font-size="9" font-family="monospace">&#10003;</text>
+                            <rect x="130" y="158" width="60" height="4" rx="2" fill="rgba(12,182,8,0.1)"/>
+                        </svg>
+                    </div>
+                    <div class="why-card-content"><h3>Bug Fixing</h3><p>Expert developers identify and fix critical issues in your code with surgical precision and rapid response times.</p></div>
+                </div>
+
+                <!-- SECURITY ANALYSIS -->
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-card-graphic">
+                        <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                            <pattern id="wg2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(0,0,0,0.03)"/></pattern>
+                            <rect width="400" height="200" fill="url(#wg2)"/>
+                            <path d="M0 80 H60 Q70 80 70 70 V40 Q70 30 80 30 H120" stroke="rgba(217,119,6,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M350 0 V50 Q350 60 340 60 H310" stroke="rgba(217,119,6,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M0 80 H60 Q70 80 70 70 V40 Q70 30 80 30 H120" stroke="#D97706" stroke-width="1.5" fill="none" opacity="0.2" stroke-dasharray="8 16"><animate attributeName="stroke-dashoffset" from="0" to="-48" dur="3s" repeatCount="indefinite"/></path>
+                            <circle cx="70" cy="80" r="2" fill="#D97706" opacity="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></circle>
+                            <path d="M200 30 L240 45 V90 C240 120 200 145 200 145 C200 145 160 120 160 90 V45 Z" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" fill="none"/>
+                            <path d="M200 38 L232 50 V88 C232 112 200 134 200 134 C200 134 168 112 168 88 V50 Z" stroke="rgba(12,182,8,0.15)" stroke-width="0.8" fill="rgba(12,182,8,0.02)"/>
+                            <path d="M185 85 L195 95 L218 70" stroke="#0CB608" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"><animate attributeName="stroke-dashoffset" from="50" to="0" dur="1.5s" begin="1s" fill="freeze"/></path>
+                            <rect x="140" y="55" width="10" height="1" fill="rgba(217,119,6,0.15)"><animate attributeName="x" values="140;148;140" dur="2s" repeatCount="indefinite"/></rect>
+                            <rect x="250" y="75" width="10" height="1" fill="rgba(217,119,6,0.15)"><animate attributeName="x" values="250;258;250" dur="2s" begin="0.5s" repeatCount="indefinite"/></rect>
+                            <rect x="118" y="158" width="6" height="6" rx="1" fill="rgba(12,182,8,0.15)" stroke="rgba(12,182,8,0.2)"/>
+                            <rect x="130" y="160" width="50" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
+                            <rect x="200" y="158" width="6" height="6" rx="1" fill="rgba(12,182,8,0.15)" stroke="rgba(12,182,8,0.2)"/>
+                            <rect x="212" y="160" width="40" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
+                            <rect x="268" y="158" width="6" height="6" rx="1" fill="rgba(217,119,6,0.15)" stroke="rgba(217,119,6,0.2)"/>
+                            <rect x="280" y="160" width="35" height="3" rx="1" fill="rgba(0,0,0,0.04)"/>
+                        </svg>
+                    </div>
+                    <div class="why-card-content"><h3>Security Analysis</h3><p>Comprehensive vulnerability assessments and security improvements to protect your application from threats.</p></div>
+                </div>
+
+                <!-- DEPLOYMENT & LAUNCH -->
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-card-graphic">
+                        <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                            <pattern id="wg3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(0,0,0,0.03)"/></pattern>
+                            <rect width="400" height="200" fill="url(#wg3)"/>
+                            <path d="M0 50 H50 Q60 50 60 60 V100" stroke="rgba(12,182,8,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M0 140 H40 Q50 140 50 130 V100 Q50 90 60 90 H100" stroke="rgba(12,182,8,0.15)" stroke-width="1" fill="none"/>
+                            <path d="M0 140 H40 Q50 140 50 130 V100 Q50 90 60 90 H100" stroke="#0CB608" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="8 16"><animate attributeName="stroke-dashoffset" from="0" to="-48" dur="3s" repeatCount="indefinite"/></path>
+                            <circle cx="50" cy="140" r="2" fill="#0CB608" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></circle>
+                            <rect x="110" y="40" width="70" height="36" rx="6" stroke="rgba(0,0,0,0.08)" fill="rgba(12,182,8,0.02)"/>
+                            <text x="128" y="54" fill="rgba(12,182,8,0.4)" font-family="monospace" font-size="8">BUILD</text>
+                            <rect x="122" y="62" width="46" height="4" rx="2" fill="rgba(12,182,8,0.15)"/>
+                            <text x="148" y="53" fill="#0CB608" font-size="8" text-anchor="middle" opacity="0.5">&#10003;</text>
+                            <line x1="184" y1="58" x2="206" y2="58" stroke="rgba(12,182,8,0.15)" stroke-width="1.5"/>
+                            <circle cx="206" cy="58" r="2" fill="#0CB608" opacity="0.4"><animate attributeName="cx" values="184;206" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <rect x="210" y="40" width="70" height="36" rx="6" stroke="rgba(0,0,0,0.08)" fill="rgba(12,182,8,0.02)"/>
+                            <text x="232" y="54" fill="rgba(12,182,8,0.4)" font-family="monospace" font-size="8">TEST</text>
+                            <rect x="222" y="62" width="46" height="4" rx="2" fill="rgba(12,182,8,0.15)"/>
+                            <text x="248" y="53" fill="#0CB608" font-size="8" text-anchor="middle" opacity="0.5">&#10003;</text>
+                            <rect x="160" y="90" width="80" height="46" rx="6" stroke="rgba(12,182,8,0.2)" stroke-width="1.5" fill="rgba(12,182,8,0.03)"/>
+                            <text x="183" y="108" fill="rgba(12,182,8,0.6)" font-family="monospace" font-size="9" font-weight="bold">DEPLOY</text>
+                            <rect x="175" y="118" width="50" height="5" rx="2" fill="rgba(12,182,8,0.2)"/>
+                            <g transform="translate(200, 155)" opacity="0.6">
+                                <path d="M0 -12 C0 -18 4 -22 4 -28 C4 -22 8 -18 8 -12 Z" stroke="#0CB608" stroke-width="1" fill="rgba(12,182,8,0.08)"/>
+                                <rect x="1" y="-12" width="6" height="8" rx="1" stroke="#0CB608" stroke-width="0.8" fill="none"/>
+                                <path d="M0 -4 L-3 2 H3 Z" fill="rgba(12,182,8,0.15)"/>
+                                <path d="M8 -4 L11 2 H5 Z" fill="rgba(12,182,8,0.15)"/>
+                            </g>
+                            <circle cx="204" cy="168" r="1.5" fill="#0CB608" opacity="0.3"><animate attributeName="cy" values="168;180" dur="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="0.8s" repeatCount="indefinite"/></circle>
+                            <circle cx="200" cy="170" r="1" fill="#10E80C" opacity="0.2"><animate attributeName="cy" values="170;182" dur="0.7s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0" dur="0.7s" begin="0.2s" repeatCount="indefinite"/></circle>
+                            <rect x="310" y="80" width="50" height="28" rx="4" stroke="rgba(0,0,0,0.06)" fill="none"/>
+                            <circle cx="322" cy="90" r="3" fill="rgba(12,182,8,0.2)"><animate attributeName="fill-opacity" values="0.15;0.5;0.15" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <rect x="330" y="88" width="20" height="3" rx="1" fill="rgba(0,0,0,0.04)"/>
+                            <circle cx="322" cy="100" r="3" fill="rgba(12,182,8,0.2)"><animate attributeName="fill-opacity" values="0.15;0.5;0.15" dur="1.5s" begin="0.3s" repeatCount="indefinite"/></circle>
+                            <rect x="330" y="98" width="16" height="3" rx="1" fill="rgba(0,0,0,0.04)"/>
+                            <line x1="244" y1="113" x2="308" y2="94" stroke="rgba(12,182,8,0.08)" stroke-width="1" stroke-dasharray="4 4"/>
+                        </svg>
+                    </div>
+                    <div class="why-card-content"><h3>Deployment &amp; Launch</h3><p>Seamless deployment services ensuring your application launches flawlessly across all environments and platforms.</p></div>
+                </div>
             </div>
         </div>
     </section>
