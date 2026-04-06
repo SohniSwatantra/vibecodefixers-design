@@ -65,8 +65,8 @@
         .featured-topbar .read-link:hover { text-decoration:underline; color:#ff9933; }
 
         /* HERO */
-        .hero { padding:150px 0 0; min-height:100vh; position:relative; overflow:hidden; }
-        .hero-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-bottom:80px; }
+        .hero { padding:150px 0 0; position:relative; overflow:hidden; }
+        .hero-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-bottom:32px; }
         .hero-text { position:relative; z-index:2; }
         .hero-tag { display:inline-flex; align-items:center; gap:8px; background:var(--bg-card); border:1px solid var(--border); color:var(--text-secondary); padding:6px 18px; border-radius:var(--r-full); font-size:13px; font-weight:600; margin-bottom:28px; }
         .hero-tag .dot { width:8px; height:8px; border-radius:50%; background:var(--green-100); box-shadow:0 0 8px var(--green-100); animation:pulse 2s infinite; }
@@ -94,7 +94,7 @@
         @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
         /* ===== HOW IT WORKS — 3 PANEL ANIMATED (CodeRabbit style) ===== */
-        .demo-section { padding:8px 0 60px; background:var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .demo-section { padding:0 0 60px; background:var(--bg-secondary); border-bottom:1px solid var(--border); }
         .demo-panels { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; max-width:1200px; margin:0 auto; padding:0 24px; }
         .demo-panel { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); overflow:hidden; min-height:420px; display:flex; flex-direction:column; position:relative; }
         .demo-panel-header { display:flex; align-items:center; gap:8px; padding:14px 18px; border-bottom:1px solid var(--border); }
