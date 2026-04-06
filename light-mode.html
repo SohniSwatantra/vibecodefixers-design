@@ -98,9 +98,12 @@
 
 
         /* ===== HOW IT WORKS — 3 PANEL ANIMATED (CodeRabbit style) ===== */
-        .demo-section { padding:0 0 60px; background:var(--bg-primary); border-bottom:1px solid var(--border); }
+        .demo-section { padding:0 0 40px; background:var(--bg-primary); border-bottom:1px solid var(--border); }
+        .demo-section .section-header { margin-bottom:28px; }
+        .demo-section .section-header h2 { font-size:clamp(22px,2.5vw,32px); }
+        .demo-section .section-header p { font-size:14px; }
         .demo-panels { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; max-width:1200px; margin:0 auto; padding:0 24px; }
-        .demo-panel { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); overflow:hidden; min-height:420px; display:flex; flex-direction:column; position:relative; box-shadow:0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03); }
+        .demo-panel { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); overflow:hidden; min-height:360px; display:flex; flex-direction:column; position:relative; box-shadow:0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03); }
         .demo-panel-header { display:flex; align-items:center; gap:8px; padding:14px 18px; border-bottom:1px solid var(--border); }
         .demo-panel-dots { display:flex; gap:5px; }
         .demo-panel-dots span { width:8px; height:8px; border-radius:50%; }
@@ -740,20 +743,29 @@
         // Nav scroll
         window.addEventListener('scroll', () => { document.querySelector('nav').style.background = scrollY>50 ? 'rgba(253,250,253,0.96)' : 'rgba(253,250,253,0.9)'; });
 
-        // Demo panel sequential reveal
+        // Demo panel looping animation (14s cycle)
         const demoSection = document.getElementById('demo-trigger');
-        let demoStarted = false;
+        let demoInterval = null;
+
+        function runDemoAnimation() {
+            const typedEls = document.querySelectorAll('.demo-typed');
+            const bar = document.getElementById('demo-progress');
+            typedEls.forEach(el => el.classList.remove('show'));
+            if (bar) bar.classList.remove('animate');
+            typedEls.forEach(el => {
+                setTimeout(() => el.classList.add('show'), parseInt(el.dataset.delay) || 0);
+            });
+            setTimeout(() => { if (bar) bar.classList.add('animate'); }, 4000);
+        }
+
         const demoObs = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !demoStarted) {
-                    demoStarted = true;
-                    document.querySelectorAll('.demo-typed').forEach(el => {
-                        setTimeout(() => el.classList.add('show'), parseInt(el.dataset.delay) || 0);
-                    });
-                    setTimeout(() => { const b = document.getElementById('demo-progress'); if(b) b.classList.add('animate'); }, 4000);
+                if (entry.isIntersecting && !demoInterval) {
+                    runDemoAnimation();
+                    demoInterval = setInterval(runDemoAnimation, 14000);
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.15 });
         if (demoSection) demoObs.observe(demoSection);
     </script>
 </body>
