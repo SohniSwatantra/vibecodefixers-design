@@ -39,19 +39,16 @@
             -webkit-mask-image:radial-gradient(ellipse 70% 50% at 50% 50%, black 20%, transparent 70%);
         }
 
-        /* NAV */
-        nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(10,10,10,0.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:background 0.3s; }
+        /* NAV — Graphite style */
+        nav { position:fixed; top:32px; left:0; right:0; z-index:100; background:rgba(10,10,10,0.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:all 0.3s; }
         .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
-        .nav-left { display:flex; align-items:center; gap:16px; }
+        .nav-left { display:flex; align-items:center; }
         .logo { font-family:var(--font-heading); font-size:20px; font-weight:700; color:var(--text-primary); text-decoration:none; letter-spacing:-0.02em; }
         .logo span { color:var(--green-100); }
-        .nav-badge { display:flex; align-items:center; gap:6px; background:var(--green-muted); color:var(--green-100); padding:5px 14px; border-radius:var(--r-full); font-size:12px; font-weight:600; border:1px solid var(--green-border); }
-        .nav-badge .stars { color:#FBBF24; }
-        .nav-counter { display:flex; align-items:center; gap:6px; background:var(--bg-elevated); color:var(--text-secondary); padding:5px 14px; border-radius:var(--r-full); font-size:12px; font-weight:600; border:1px solid var(--border); }
-        .nav-counter strong { color:var(--green-100); }
-        .nav-right { display:flex; align-items:center; gap:6px; }
-        .nav-link { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:600; padding:8px 16px; border-radius:var(--r-sm); transition:all 0.2s; }
-        .nav-link:hover { color:var(--text-primary); background:var(--bg-elevated); }
+        .nav-center { display:flex; align-items:center; gap:4px; }
+        .nav-right { display:flex; align-items:center; gap:8px; }
+        .nav-link { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:500; padding:8px 16px; border-radius:var(--r-sm); transition:all 0.2s; }
+        .nav-link:hover { color:var(--text-primary); }
 
         .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--green-100); color:#000; padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:700; font-family:var(--font-body); text-decoration:none; border:none; cursor:pointer; transition:all 0.25s; }
         .btn-primary:hover { background:var(--green-200); box-shadow:0 0 20px rgba(16,232,12,0.2); transform:translateY(-1px); }
@@ -59,16 +56,16 @@
         .btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--text-primary); padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:600; font-family:var(--font-body); text-decoration:none; border:1px solid var(--border-hover); cursor:pointer; transition:all 0.25s; }
         .btn-outline:hover { border-color:var(--green-border); background:var(--green-muted); color:var(--green-100); }
 
-        /* FEATURED BANNER */
-        .featured-banner { background:var(--bg-card); border:1px solid #d9ffb3; border-radius:var(--r-lg); padding:20px 32px; display:flex; align-items:center; gap:24px; margin-bottom:40px; }
-        .featured-banner .badge { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:#ff8000; padding:4px 12px; border-radius:var(--r-full); border:none; white-space:nowrap; }
-        .featured-banner .source { font-family:var(--font-heading); font-size:18px; font-weight:700; color:var(--text-primary); }
-        .featured-banner .quote { font-size:14px; color:var(--text-secondary); font-style:italic; flex:1; }
-        .featured-banner .read-link { color:#ff8000; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap; }
-        .featured-banner .read-link:hover { text-decoration:underline; color:#ff9933; }
+        /* FEATURED TOPBAR */
+        .featured-topbar { position:fixed; top:0; left:0; right:0; z-index:101; background:var(--bg-card); border-bottom:1px solid #d9ffb3; display:flex; align-items:center; justify-content:center; gap:16px; padding:6px 24px; font-size:13px; }
+        .featured-topbar .badge { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:#ff8000; padding:3px 10px; border-radius:var(--r-full); border:none; white-space:nowrap; }
+        .featured-topbar .source { font-family:var(--font-heading); font-size:14px; font-weight:700; color:var(--text-primary); }
+        .featured-topbar .quote { font-size:13px; color:var(--text-secondary); font-style:italic; }
+        .featured-topbar .read-link { color:#ff8000; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; }
+        .featured-topbar .read-link:hover { text-decoration:underline; color:#ff9933; }
 
         /* HERO */
-        .hero { padding:120px 0 0; min-height:100vh; position:relative; overflow:hidden; }
+        .hero { padding:150px 0 0; min-height:100vh; position:relative; overflow:hidden; }
         .hero-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-bottom:80px; }
         .hero-text { position:relative; z-index:2; }
         .hero-tag { display:inline-flex; align-items:center; gap:8px; background:var(--bg-card); border:1px solid var(--border); color:var(--text-secondary); padding:6px 18px; border-radius:var(--r-full); font-size:13px; font-weight:600; margin-bottom:28px; }
@@ -85,13 +82,19 @@
         .trace-line-glow { stroke:var(--green-100); stroke-width:1.5; fill:none; opacity:0.4; stroke-dasharray:8 16; animation:tracePulse 3s linear infinite; }
         @keyframes tracePulse { 0%{stroke-dashoffset:0} 100%{stroke-dashoffset:-48} }
 
-        /* MARQUEE */
-        .marquee-section { padding:32px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); overflow:hidden; background:var(--bg-primary); }
-        .marquee-label { text-align:center; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-tertiary); margin-bottom:20px; font-weight:600; }
-        .marquee-track { display:flex; animation:marquee 20s linear infinite; width:max-content; }
-        .marquee-track:hover { animation-play-state:paused; }
-        .marquee-item { font-family:var(--font-heading); font-size:16px; font-weight:500; color:var(--text-tertiary); padding:0 48px; white-space:nowrap; opacity:0.5; transition:opacity 0.3s; }
-        .marquee-item:hover { opacity:1; }
+        /* AS SEEN IN — logo bar */
+        .seen-in-section { padding:20px 0 24px; overflow:hidden; background:var(--bg-primary); }
+        .seen-in-label { text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-tertiary); margin-bottom:16px; font-weight:600; }
+        .seen-in-logos { display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap; }
+        .seen-in-logo { display:inline-flex; align-items:center; gap:6px; opacity:0.4; transition:opacity 0.3s; text-decoration:none; }
+        .seen-in-logo:hover { opacity:0.8; }
+        .seen-in-logo .logo-icon-hn { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#FF6600; border-radius:3px; color:#fff; font-family:var(--font-heading); font-size:14px; font-weight:700; }
+        .seen-in-logo .logo-text { font-family:var(--font-heading); font-size:14px; font-weight:600; color:var(--text-secondary); }
+        .seen-in-logo .logo-text-bold { font-family:var(--font-heading); font-size:15px; font-weight:700; color:var(--text-secondary); }
+        .seen-in-logo .logo-icon-yc { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#FF6600; border-radius:50%; color:#fff; font-family:var(--font-heading); font-size:13px; font-weight:700; }
+        .seen-in-logo .logo-404 { font-family:var(--font-heading); font-size:15px; font-weight:700; color:var(--text-secondary); letter-spacing:-0.02em; }
+        .seen-in-logo .logo-indeed { font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--text-secondary); letter-spacing:-0.02em; }
+        .seen-in-logo .logo-ph { font-family:var(--font-heading); font-size:14px; font-weight:600; color:var(--text-secondary); }
         @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
         /* SECTIONS */
@@ -213,8 +216,8 @@
             .why-grid { grid-template-columns:1fr; }
             .join-grid,.community-grid { grid-template-columns:1fr; }
             .footer-grid { grid-template-columns:1fr 1fr; }
-            .nav-badge,.nav-counter { display:none; }
-            .featured-banner { flex-direction:column; text-align:center; gap:12px; }
+            .nav-center { display:none; }
+            .featured-topbar .quote { display:none; }
         }
         @media(max-width:480px) {
             .steps-grid,.testimonials-grid,.footer-grid { grid-template-columns:1fr; }
@@ -224,19 +227,28 @@
 </head>
 <body>
 
+    <!-- FEATURED TOPBAR -->
+    <div class="featured-topbar">
+        <span class="badge">Featured In</span>
+        <span class="source">404 MEDIA</span>
+        <span class="quote">"The Software Engineers Paid to Fix Vibe Coded Messes"</span>
+        <a href="#" class="read-link">Read Article &rarr;</a>
+    </div>
+
     <!-- NAV -->
     <nav>
         <div class="nav-inner">
             <div class="nav-left">
                 <a href="#" class="logo">Vibe<span>CodeFixers</span></a>
-                <div class="nav-badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> As seen in Hacker &amp; YCombinator News</div>
-                <div class="nav-counter"><strong>242</strong>&nbsp; Experts Signed Up</div>
+            </div>
+            <div class="nav-center">
+                <a href="#" class="nav-link">Find Experts</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
             </div>
             <div class="nav-right">
-                <a href="#" class="nav-link">Contact</a>
-                <a href="#" class="btn-primary">Find Experts <span class="arrow">&raquo;</span></a>
-                <a href="#" class="nav-link">Blog</a>
                 <a href="#" class="btn-outline">Join as Expert</a>
+                <a href="#" class="btn-primary">Find Experts <span class="arrow">&raquo;</span></a>
             </div>
         </div>
     </nav>
@@ -244,13 +256,6 @@
     <!-- HERO -->
     <section class="hero grid-bg">
         <div class="container">
-            <!-- Featured Banner -->
-            <div class="featured-banner reveal">
-                <span class="badge">Featured In</span>
-                <span class="source">404 MEDIA</span>
-                <span class="quote">"The Software Engineers Paid to Fix Vibe Coded Messes"</span>
-                <a href="#" class="read-link">Read Article &rarr;</a>
-            </div>
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-tag reveal"><span class="dot"></span> Expert Developer Network</div>
@@ -330,13 +335,18 @@
         </div>
     </section>
 
-    <!-- LOGO MARQUEE -->
-    <div class="marquee-section">
-        <p class="marquee-label">As seen in</p>
-        <div style="overflow:hidden;"><div class="marquee-track">
-            <span class="marquee-item">Hacker News</span><span class="marquee-item">YCombinator</span><span class="marquee-item">Product Hunt</span><span class="marquee-item">404 Media</span><span class="marquee-item">Dev.to</span><span class="marquee-item">Indie Hackers</span><span class="marquee-item">Reddit</span>
-            <span class="marquee-item">Hacker News</span><span class="marquee-item">YCombinator</span><span class="marquee-item">Product Hunt</span><span class="marquee-item">404 Media</span><span class="marquee-item">Dev.to</span><span class="marquee-item">Indie Hackers</span><span class="marquee-item">Reddit</span>
-        </div></div>
+    <!-- AS SEEN IN -->
+    <div class="seen-in-section">
+        <p class="seen-in-label">As seen in</p>
+        <div class="seen-in-logos">
+            <a href="#" class="seen-in-logo"><span class="logo-icon-hn">Y</span><span class="logo-text-bold">Hacker News</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-icon-yc">Y</span><span class="logo-text">YCombinator</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-404">404 MEDIA</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-indeed">indeed</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-ph">Product Hunt</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-text">Dev.to</span></a>
+            <a href="#" class="seen-in-logo"><span class="logo-text">Reddit</span></a>
+        </div>
     </div>
 
     <!-- FEATURED EXPERTS -->
