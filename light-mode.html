@@ -41,18 +41,16 @@
         }
 
         /* NAV */
-        nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(253,250,253,0.9); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:background 0.3s; }
+        /* NAV -- Graphite style */
+        nav { position:fixed; top:32px; left:0; right:0; z-index:100; background:rgba(253,250,253,0.9); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:all 0.3s; }
         .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
-        .nav-left { display:flex; align-items:center; gap:16px; }
+        .nav-left { display:flex; align-items:center; }
         .logo { font-family:var(--font-heading); font-size:20px; font-weight:700; color:var(--text-primary); text-decoration:none; letter-spacing:-0.02em; }
         .logo span { color:var(--green-100); }
-        .nav-badge { display:flex; align-items:center; gap:6px; background:var(--green-muted); color:var(--green-100); padding:5px 14px; border-radius:var(--r-full); font-size:12px; font-weight:600; border:1px solid var(--green-border); }
-        .nav-badge .stars { color:#D97706; }
-        .nav-counter { display:flex; align-items:center; gap:6px; background:var(--bg-elevated); color:var(--text-secondary); padding:5px 14px; border-radius:var(--r-full); font-size:12px; font-weight:600; border:1px solid var(--border); }
-        .nav-counter strong { color:var(--green-100); }
-        .nav-right { display:flex; align-items:center; gap:6px; }
-        .nav-link { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:600; padding:8px 16px; border-radius:var(--r-sm); transition:all 0.2s; }
-        .nav-link:hover { color:var(--text-primary); background:var(--bg-elevated); }
+        .nav-center { display:flex; align-items:center; gap:4px; }
+        .nav-right { display:flex; align-items:center; gap:8px; }
+        .nav-link { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:500; padding:8px 16px; border-radius:var(--r-sm); transition:all 0.2s; }
+        .nav-link:hover { color:var(--text-primary); }
 
         .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--green-100); color:#fff; padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:700; font-family:var(--font-body); text-decoration:none; border:none; cursor:pointer; transition:all 0.25s; }
         .btn-primary:hover { background:var(--green-200); box-shadow:0 0 24px rgba(12,182,8,0.25), 0 0 48px rgba(255,200,255,0.1); transform:translateY(-1px); }
@@ -61,15 +59,16 @@
         .btn-outline:hover { border-color:var(--green-border); background:var(--green-muted); color:var(--green-100); }
 
         /* FEATURED BANNER */
-        .featured-banner { background:linear-gradient(135deg, #fff 0%, rgba(255,230,255,0.3) 100%); border:1px solid #d9ffb3; border-radius:var(--r-lg); padding:20px 32px; display:flex; align-items:center; gap:24px; margin-bottom:40px; }
-        .featured-banner .badge { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:#ff8000; padding:4px 12px; border-radius:var(--r-full); border:none; white-space:nowrap; }
-        .featured-banner .source { font-family:var(--font-heading); font-size:18px; font-weight:700; color:var(--text-primary); }
-        .featured-banner .quote { font-size:14px; color:var(--text-secondary); font-style:italic; flex:1; }
-        .featured-banner .read-link { color:#ff8000; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap; }
-        .featured-banner .read-link:hover { text-decoration:underline; color:#e67300; }
+        /* FEATURED TOPBAR */
+        .featured-topbar { position:fixed; top:0; left:0; right:0; z-index:101; background:linear-gradient(135deg, #fff 0%, rgba(255,230,255,0.4) 100%); border-bottom:1px solid #d9ffb3; display:flex; align-items:center; justify-content:center; gap:16px; padding:6px 24px; font-size:13px; }
+        .featured-topbar .badge { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:#ff8000; padding:3px 10px; border-radius:var(--r-full); border:none; white-space:nowrap; }
+        .featured-topbar .source { font-family:var(--font-heading); font-size:14px; font-weight:700; color:var(--text-primary); }
+        .featured-topbar .quote { font-size:13px; color:var(--text-secondary); font-style:italic; }
+        .featured-topbar .read-link { color:#ff8000; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; }
+        .featured-topbar .read-link:hover { text-decoration:underline; color:#e67300; }
 
         /* HERO */
-        .hero { padding:120px 0 0; min-height:100vh; position:relative; overflow:hidden; background:linear-gradient(180deg, #fff 0%, #FBF8FB 40%, rgba(255,230,255,0.2) 100%); }
+        .hero { padding:150px 0 0; min-height:100vh; position:relative; overflow:hidden; background:linear-gradient(180deg, #fff 0%, #FBF8FB 40%, rgba(255,230,255,0.2) 100%); }
         .hero::before { content:''; position:absolute; top:-150px; right:-100px; width:600px; height:600px; background:radial-gradient(ellipse, rgba(255,200,255,0.25) 0%, rgba(12,182,8,0.06) 40%, transparent 70%); pointer-events:none; }
         .hero::after { content:''; position:absolute; bottom:0; left:-100px; width:500px; height:500px; background:radial-gradient(ellipse, rgba(12,182,8,0.08) 0%, rgba(255,220,255,0.1) 40%, transparent 70%); pointer-events:none; z-index:0; }
         .hero-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-bottom:80px; }
@@ -208,7 +207,7 @@
         .footer-bottom { border-top:1px solid var(--border); padding-top:20px; display:flex; align-items:center; justify-content:space-between; font-size:13px; color:var(--text-tertiary); }
 
         /* Light mode card shadows with pink tint */
-        .expert-card, .why-card, .testimonial-card, .step-card, .community-card, .featured-banner { box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03), 0 0 0 0.5px rgba(255,200,255,0.1); }
+        .expert-card, .why-card, .testimonial-card, .step-card, .community-card { box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03), 0 0 0 0.5px rgba(255,200,255,0.1); }
 
         /* RESPONSIVE */
         @media(max-width:900px) {
@@ -219,8 +218,8 @@
             .why-grid { grid-template-columns:1fr; }
             .join-grid,.community-grid { grid-template-columns:1fr; }
             .footer-grid { grid-template-columns:1fr 1fr; }
-            .nav-badge,.nav-counter { display:none; }
-            .featured-banner { flex-direction:column; text-align:center; gap:12px; }
+            .nav-center { display:none; }
+            .featured-topbar .quote { display:none; }
         }
         @media(max-width:480px) {
             .steps-grid,.testimonials-grid,.footer-grid { grid-template-columns:1fr; }
@@ -230,19 +229,28 @@
 </head>
 <body>
 
+    <!-- FEATURED TOPBAR -->
+    <div class="featured-topbar">
+        <span class="badge">Featured In</span>
+        <span class="source">404 MEDIA</span>
+        <span class="quote">"The Software Engineers Paid to Fix Vibe Coded Messes"</span>
+        <a href="#" class="read-link">Read Article &rarr;</a>
+    </div>
+
     <!-- NAV -->
     <nav>
         <div class="nav-inner">
             <div class="nav-left">
                 <a href="#" class="logo">Vibe<span>CodeFixers</span></a>
-                <div class="nav-badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> As seen in Hacker &amp; YCombinator News</div>
-                <div class="nav-counter"><strong>242</strong>&nbsp; Experts Signed Up</div>
+            </div>
+            <div class="nav-center">
+                <a href="#" class="nav-link">Find Experts</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
             </div>
             <div class="nav-right">
-                <a href="#" class="nav-link">Contact</a>
-                <a href="#" class="btn-primary">Find Experts <span class="arrow">&raquo;</span></a>
-                <a href="#" class="nav-link">Blog</a>
                 <a href="#" class="btn-outline">Join as Expert</a>
+                <a href="#" class="btn-primary">Find Experts <span class="arrow">&raquo;</span></a>
             </div>
         </div>
     </nav>
@@ -250,13 +258,6 @@
     <!-- HERO -->
     <section class="hero grid-bg">
         <div class="container">
-            <!-- Featured Banner -->
-            <div class="featured-banner reveal">
-                <span class="badge">Featured In</span>
-                <span class="source">404 MEDIA</span>
-                <span class="quote">"The Software Engineers Paid to Fix Vibe Coded Messes"</span>
-                <a href="#" class="read-link">Read Article &rarr;</a>
-            </div>
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-tag reveal"><span class="dot"></span> Expert Developer Network</div>
