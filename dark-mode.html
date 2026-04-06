@@ -93,6 +93,86 @@
         .seen-in-logo svg { height:28px; width:auto; }
         @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
+        /* ===== HOW IT WORKS — 3 PANEL ANIMATED (CodeRabbit style) ===== */
+        .demo-section { padding:80px 0 60px; background:var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .demo-panels { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; max-width:1200px; margin:0 auto; padding:0 24px; }
+        .demo-panel { background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); overflow:hidden; min-height:420px; display:flex; flex-direction:column; position:relative; }
+        .demo-panel-header { display:flex; align-items:center; gap:8px; padding:14px 18px; border-bottom:1px solid var(--border); }
+        .demo-panel-dots { display:flex; gap:5px; }
+        .demo-panel-dots span { width:8px; height:8px; border-radius:50%; }
+        .demo-panel-dots span:nth-child(1) { background:#FF5F57; }
+        .demo-panel-dots span:nth-child(2) { background:#FEBC2E; }
+        .demo-panel-dots span:nth-child(3) { background:#28C840; }
+        .demo-panel-title { font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--text-tertiary); margin-left:8px; }
+        .demo-panel-body { padding:20px 18px; flex:1; overflow:hidden; position:relative; }
+
+        /* Step indicator */
+        .demo-step { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+        .demo-step-num { width:24px; height:24px; border-radius:50%; background:var(--green-100); color:#000; display:inline-flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:12px; font-weight:700; }
+        .demo-step-label { font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--green-100); text-transform:uppercase; letter-spacing:0.06em; }
+
+        /* Form elements in panel 1 */
+        .demo-form-group { margin-bottom:14px; }
+        .demo-form-label { font-size:11px; font-weight:600; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; }
+        .demo-form-input { background:var(--bg-elevated); border:1px solid var(--border); border-radius:6px; padding:10px 12px; font-size:13px; color:var(--text-primary); font-family:var(--font-body); width:100%; display:block; }
+        .demo-form-input.filled { border-color:var(--green-border); }
+        .demo-form-textarea { background:var(--bg-elevated); border:1px solid var(--border); border-radius:6px; padding:10px 12px; font-size:12px; color:var(--text-secondary); font-family:monospace; width:100%; min-height:60px; display:block; line-height:1.5; }
+        .demo-form-textarea.filled { border-color:var(--green-border); }
+        .demo-form-btn { display:inline-flex; align-items:center; gap:6px; background:var(--green-100); color:#000; padding:8px 16px; border-radius:6px; font-size:12px; font-weight:700; border:none; margin-top:8px; }
+
+        /* Analysis panel 2 */
+        .demo-analysis-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid var(--border); }
+        .demo-analysis-item:last-child { border-bottom:none; }
+        .demo-analysis-icon { width:28px; height:28px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; margin-top:2px; }
+        .demo-analysis-icon.bug { background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.2); }
+        .demo-analysis-icon.security { background:rgba(251,191,36,0.12); border:1px solid rgba(251,191,36,0.2); }
+        .demo-analysis-icon.perf { background:rgba(16,232,12,0.08); border:1px solid var(--green-border); }
+        .demo-analysis-title { font-size:13px; font-weight:600; color:var(--text-primary); }
+        .demo-analysis-desc { font-size:11px; color:var(--text-tertiary); margin-top:2px; line-height:1.4; }
+        .demo-analysis-severity { font-size:10px; font-weight:700; padding:2px 8px; border-radius:var(--r-full); margin-top:4px; display:inline-block; }
+        .demo-analysis-severity.high { background:rgba(239,68,68,0.15); color:#EF4444; }
+        .demo-analysis-severity.medium { background:rgba(251,191,36,0.15); color:#FBBF24; }
+        .demo-analysis-severity.low { background:rgba(16,232,12,0.1); color:var(--green-100); }
+        .demo-progress { margin-top:14px; }
+        .demo-progress-label { font-size:11px; color:var(--text-tertiary); margin-bottom:6px; }
+        .demo-progress-bar { height:4px; background:var(--bg-elevated); border-radius:2px; overflow:hidden; }
+        .demo-progress-fill { height:100%; background:var(--green-100); border-radius:2px; width:0%; transition:width 2s ease-out; }
+        .demo-progress-fill.animate { width:100%; }
+
+        /* Email panel 3 */
+        .demo-email-header { display:flex; align-items:center; gap:10px; padding-bottom:14px; border-bottom:1px solid var(--border); margin-bottom:14px; }
+        .demo-email-avatar { width:32px; height:32px; border-radius:50%; background:var(--green-muted); border:1px solid var(--green-border); display:flex; align-items:center; justify-content:center; font-size:14px; }
+        .demo-email-from { font-size:13px; font-weight:600; }
+        .demo-email-subject { font-size:11px; color:var(--text-tertiary); }
+        .demo-email-body { font-size:12px; color:var(--text-secondary); line-height:1.6; }
+        .demo-email-body strong { color:var(--text-primary); }
+        .demo-email-estimate { background:var(--bg-elevated); border:1px solid var(--border); border-radius:8px; padding:12px; margin:12px 0; }
+        .demo-email-estimate-row { display:flex; justify-content:space-between; font-size:12px; padding:3px 0; }
+        .demo-email-estimate-row .label { color:var(--text-tertiary); }
+        .demo-email-estimate-row .value { color:var(--text-primary); font-weight:600; }
+        .demo-email-estimate-row .value.green { color:var(--green-100); }
+        .demo-expert-suggestion { display:flex; align-items:center; gap:10px; background:var(--bg-elevated); border:1px solid var(--border); border-radius:8px; padding:10px 12px; margin-top:10px; }
+        .demo-expert-avatar { width:28px; height:28px; border-radius:50%; background:var(--green-muted); border:1px solid var(--green-border); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:var(--green-100); }
+        .demo-expert-name { font-size:12px; font-weight:600; }
+        .demo-expert-role { font-size:10px; color:var(--text-tertiary); }
+        .demo-expert-rate { font-size:12px; font-weight:700; color:var(--green-100); margin-left:auto; }
+
+        /* Typing animation for text reveals */
+        .demo-typed { opacity:0; transform:translateY(8px); transition:opacity 0.5s, transform 0.5s; }
+        .demo-typed.show { opacity:1; transform:translateY(0); }
+
+        /* Blinking cursor in form */
+        .demo-cursor { display:inline-block; width:2px; height:14px; background:var(--green-100); animation:blink 0.8s infinite; vertical-align:middle; margin-left:2px; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+        /* Scanning line animation */
+        .demo-scan-line { position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--green-100), transparent); opacity:0; animation:scanDown 3s ease-in-out infinite; animation-delay:4s; }
+        @keyframes scanDown { 0%{top:60px;opacity:0} 10%{opacity:0.6} 90%{opacity:0.6} 100%{top:100%;opacity:0} }
+
+        @media(max-width:900px) {
+            .demo-panels { grid-template-columns:1fr; max-width:480px; }
+        }
+
         /* SECTIONS */
         section { padding:96px 0; }
         .section-header { text-align:center; margin-bottom:56px; }
@@ -331,6 +411,146 @@
         </div>
     </section>
 
+    <!-- 3-PANEL DEMO (CodeRabbit style) -->
+    <section class="demo-section" id="demo-trigger">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">See It In Action</span>
+                <h2>From <span class="highlight">Broken Code</span> to Fixed in 3 Steps</h2>
+                <p>Submit your problem, our platform analyzes it, and you get matched with the right expert</p>
+            </div>
+        </div>
+        <div class="demo-panels">
+            <!-- PANEL 1: Submit Problem -->
+            <div class="demo-panel" id="panel-1">
+                <div class="demo-panel-header">
+                    <div class="demo-panel-dots"><span></span><span></span><span></span></div>
+                    <span class="demo-panel-title">vibecodefixers.com/submit</span>
+                </div>
+                <div class="demo-panel-body">
+                    <div class="demo-step"><span class="demo-step-num">1</span><span class="demo-step-label">Submit Your Problem</span></div>
+
+                    <div class="demo-form-group demo-typed" data-delay="500">
+                        <div class="demo-form-label">GitHub Repository</div>
+                        <div class="demo-form-input filled" id="demo-repo">github.com/myapp/frontend<span class="demo-cursor"></span></div>
+                    </div>
+                    <div class="demo-form-group demo-typed" data-delay="1200">
+                        <div class="demo-form-label">Describe Your Problem</div>
+                        <div class="demo-form-textarea filled">App crashes on login after deploying to Vercel. Auth flow breaks with 500 error. Built with Next.js + Supabase using V0.</div>
+                    </div>
+                    <div class="demo-form-group demo-typed" data-delay="2000">
+                        <div class="demo-form-label">Tech Stack</div>
+                        <div class="demo-form-input filled">Next.js, Supabase, Tailwind, V0</div>
+                    </div>
+                    <div class="demo-form-group demo-typed" data-delay="2600">
+                        <div class="demo-form-label">Budget Range</div>
+                        <div class="demo-form-input filled">$100 - $300</div>
+                    </div>
+                    <div class="demo-typed" data-delay="3200">
+                        <div class="demo-form-btn">Submit Request &raquo;</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 2: Platform Analysis -->
+            <div class="demo-panel" id="panel-2">
+                <div class="demo-panel-header">
+                    <div class="demo-panel-dots"><span></span><span></span><span></span></div>
+                    <span class="demo-panel-title">VibeCodeFixers Analysis</span>
+                </div>
+                <div class="demo-panel-body">
+                    <div class="demo-scan-line"></div>
+                    <div class="demo-step"><span class="demo-step-num">2</span><span class="demo-step-label">Analyzing Your Code</span></div>
+
+                    <div class="demo-progress demo-typed" data-delay="3800">
+                        <div class="demo-progress-label">Scanning repository...</div>
+                        <div class="demo-progress-bar"><div class="demo-progress-fill" id="demo-progress"></div></div>
+                    </div>
+
+                    <div class="demo-analysis-item demo-typed" data-delay="5000">
+                        <div class="demo-analysis-icon bug">&#128308;</div>
+                        <div>
+                            <div class="demo-analysis-title">Auth Callback Misconfigured</div>
+                            <div class="demo-analysis-desc">Supabase redirect URL not set for production domain</div>
+                            <span class="demo-analysis-severity high">Critical</span>
+                        </div>
+                    </div>
+                    <div class="demo-analysis-item demo-typed" data-delay="5800">
+                        <div class="demo-analysis-icon security">&#128310;</div>
+                        <div>
+                            <div class="demo-analysis-title">Exposed API Keys in Client</div>
+                            <div class="demo-analysis-desc">SUPABASE_SERVICE_KEY found in client-side bundle</div>
+                            <span class="demo-analysis-severity high">Critical</span>
+                        </div>
+                    </div>
+                    <div class="demo-analysis-item demo-typed" data-delay="6600">
+                        <div class="demo-analysis-icon perf">&#9889;</div>
+                        <div>
+                            <div class="demo-analysis-title">Unoptimized Re-renders</div>
+                            <div class="demo-analysis-desc">Auth state causing full-page re-renders on every route</div>
+                            <span class="demo-analysis-severity medium">Medium</span>
+                        </div>
+                    </div>
+                    <div class="demo-analysis-item demo-typed" data-delay="7200">
+                        <div class="demo-analysis-icon perf">&#128269;</div>
+                        <div>
+                            <div class="demo-analysis-title">Missing Error Boundaries</div>
+                            <div class="demo-analysis-desc">No error handling around Supabase calls</div>
+                            <span class="demo-analysis-severity low">Low</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 3: Results & Expert Match -->
+            <div class="demo-panel" id="panel-3">
+                <div class="demo-panel-header">
+                    <div class="demo-panel-dots"><span></span><span></span><span></span></div>
+                    <span class="demo-panel-title">inbox &mdash; VibeCodeFixers Report</span>
+                </div>
+                <div class="demo-panel-body">
+                    <div class="demo-step"><span class="demo-step-num">3</span><span class="demo-step-label">Your Report &amp; Expert Match</span></div>
+
+                    <div class="demo-typed" data-delay="7800">
+                        <div class="demo-email-header">
+                            <div class="demo-email-avatar">&#128295;</div>
+                            <div>
+                                <div class="demo-email-from">VibeCodeFixers Team</div>
+                                <div class="demo-email-subject">Your Code Analysis is Ready</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-email-body demo-typed" data-delay="8500">
+                        <p>Hi there, we've analyzed your repo and found <strong>4 issues</strong> (2 critical). Here's your estimate:</p>
+                    </div>
+
+                    <div class="demo-email-estimate demo-typed" data-delay="9200">
+                        <div class="demo-email-estimate-row"><span class="label">Issues Found</span><span class="value">4 (2 Critical, 1 Medium, 1 Low)</span></div>
+                        <div class="demo-email-estimate-row"><span class="label">Estimated Fix Time</span><span class="value">4-6 hours</span></div>
+                        <div class="demo-email-estimate-row"><span class="label">Estimated Cost</span><span class="value green">$150 - $250</span></div>
+                        <div class="demo-email-estimate-row"><span class="label">Similar Past Fixes</span><span class="value">23 projects</span></div>
+                    </div>
+
+                    <div class="demo-email-body demo-typed" data-delay="9800" style="margin-top:10px;">
+                        <p><strong>Suggested Experts:</strong></p>
+                    </div>
+
+                    <div class="demo-expert-suggestion demo-typed" data-delay="10400">
+                        <div class="demo-expert-avatar">GU</div>
+                        <div><div class="demo-expert-name">Goran Urukalo</div><div class="demo-expert-role">Senior Frontend &middot; Next.js, Supabase</div></div>
+                        <div class="demo-expert-rate">$50/hr</div>
+                    </div>
+                    <div class="demo-expert-suggestion demo-typed" data-delay="10800">
+                        <div class="demo-expert-avatar">GG</div>
+                        <div><div class="demo-expert-name">Greg Gorlen</div><div class="demo-expert-role">Product Engineer &middot; Auth, APIs</div></div>
+                        <div class="demo-expert-rate">$80/hr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- AS SEEN IN -->
     <div class="seen-in-section">
         <p class="seen-in-label">As seen in</p>
@@ -518,6 +738,28 @@
 
         // Nav scroll
         window.addEventListener('scroll', () => { document.querySelector('nav').style.background = scrollY>50 ? 'rgba(10,10,10,0.95)' : 'rgba(10,10,10,0.85)'; });
+
+        // Demo panel sequential reveal
+        const demoSection = document.getElementById('demo-trigger');
+        let demoStarted = false;
+        const demoObs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !demoStarted) {
+                    demoStarted = true;
+                    const typedEls = document.querySelectorAll('.demo-typed');
+                    typedEls.forEach(el => {
+                        const delay = parseInt(el.dataset.delay) || 0;
+                        setTimeout(() => el.classList.add('show'), delay);
+                    });
+                    // Progress bar animation
+                    setTimeout(() => {
+                        const bar = document.getElementById('demo-progress');
+                        if (bar) bar.classList.add('animate');
+                    }, 4000);
+                }
+            });
+        }, { threshold: 0.2 });
+        if (demoSection) demoObs.observe(demoSection);
     </script>
 </body>
 </html>
