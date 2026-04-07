@@ -161,7 +161,7 @@
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
         .demo-scan-line { position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--green-100), transparent); opacity:0; animation:scanDown 3s ease-in-out infinite; animation-delay:4s; }
         @keyframes scanDown { 0%{top:60px;opacity:0} 10%{opacity:0.4} 90%{opacity:0.4} 100%{top:100%;opacity:0} }
-        @media(max-width:900px) { .demo-panels { grid-template-columns:1fr; max-width:480px; } }
+        @media(max-width:900px) { .demo-panels { grid-template-columns:1fr; max-width:480px; margin:0 auto; } }
 
         /* SECTIONS */
         section { padding:96px 0; }
@@ -281,7 +281,8 @@
         @media(max-width:900px) {
             .hero-content { grid-template-columns:1fr; text-align:center; }
             .hero-cta { justify-content:center; }
-            .hero-illustration { margin-top:40px; }
+            .hero-illustration { margin-top:24px; }
+            .hero-illustration .hero-svg-wrap { max-width:360px; }
             .steps-grid,.testimonials-grid { grid-template-columns:repeat(2,1fr); }
             .why-grid { grid-template-columns:1fr; }
             .join-grid,.community-grid { grid-template-columns:1fr; }
@@ -289,9 +290,75 @@
             .nav-center { display:none; }
             .featured-topbar .quote { display:none; }
         }
-        @media(max-width:480px) {
-            .steps-grid,.testimonials-grid,.footer-grid { grid-template-columns:1fr; }
-            .hero-cta { flex-direction:column; }
+        @media(max-width:640px) {
+            /* Topbar */
+            .featured-topbar { padding:5px 12px; gap:8px; font-size:11px; }
+            .featured-topbar .badge { font-size:9px; padding:2px 8px; }
+            .featured-topbar .source { font-size:12px; }
+            .featured-topbar .read-link { font-size:11px; }
+
+            /* Nav — compact mobile */
+            nav { top:28px; height:auto; }
+            .nav-inner { height:52px; padding:0 16px; }
+            .logo { font-size:17px; }
+            .nav-right { gap:4px; }
+            .nav-right .btn-outline { display:none; }
+            .btn-primary { padding:8px 14px; font-size:13px; }
+            .btn-primary .arrow { width:16px; height:16px; font-size:10px; }
+            .nav-link { padding:6px 10px; font-size:13px; }
+
+            /* Hero */
+            .hero { padding:110px 0 0; }
+            .hero h1 { font-size:28px; }
+            .hero-desc { font-size:15px; }
+            .hero-tag { font-size:12px; padding:5px 14px; margin-bottom:20px; }
+            .hero-cta { flex-direction:column; align-items:center; }
+            .hero-cta .btn-primary, .hero-cta .btn-outline { width:100%; justify-content:center; max-width:280px; }
+            .hero-illustration { margin-top:16px; }
+            .hero-illustration .hero-svg-wrap { max-width:300px; }
+
+            /* Demo panels — stack */
+            .demo-panels { grid-template-columns:1fr; max-width:400px; margin:0 auto; }
+            .demo-panel { min-height:320px; }
+            .demo-section .section-header h2 { font-size:20px; }
+
+            /* Steps & grids */
+            .steps-grid { grid-template-columns:1fr; }
+            .testimonials-grid { grid-template-columns:1fr; }
+            .why-grid { grid-template-columns:1fr; }
+            .footer-grid { grid-template-columns:1fr; }
+
+            /* Cards */
+            .expert-card { min-width:220px; max-width:220px; }
+
+            /* Section header */
+            .section-header { margin-bottom:36px; }
+            .section-header h2 { font-size:24px; }
+            .section-header p { font-size:14px; }
+
+            /* Seen-in logos */
+            .seen-in-logos, div[style*="seen-in"] { gap:24px !important; }
+            .seen-in-logo img, div[style*="seen-in"] img { height:28px !important; }
+
+            /* Join section */
+            .join-visual { min-height:280px; padding:40px 24px; }
+            .logo-img { max-width:200px; }
+
+            /* FAQ */
+            .faq-question { font-size:14px; padding:16px 18px; }
+
+            /* Community */
+            .community-card-graphic { height:140px; }
+
+            /* Why cards */
+            .why-card-graphic { height:160px; }
+
+            /* CTA */
+            .final-cta { padding:48px 24px; }
+            .final-cta h2 { font-size:24px; }
+
+            /* Footer */
+            .footer-brand p { max-width:100%; }
         }
     </style>
 </head>
