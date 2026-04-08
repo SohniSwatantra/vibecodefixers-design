@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Backgrounds — neutral dark, NOT purple */
+            /* Backgrounds — neutral dark charcoal */
             --rail-bg: #1C1E26;
             --rail-bg-alt: #171B21;
             --rail-bg-teal: #162025;
@@ -17,9 +17,10 @@
             --rail-bg-card-hover: #2A2D36;
             --rail-bg-elevated: #2E3139;
 
-            /* Accent — purple ONLY for primary button */
-            --rail-purple: #6C4CED;
-            --rail-purple-hover: #7B5DF5;
+            /* Accent — dark teal */
+            --rail-accent: #303C40;
+            --rail-accent-hover: #3A484D;
+            --rail-accent-light: #47D4A0; /* visible accent for text/links */
 
             /* Status green */
             --rail-green: #47D4A0;
@@ -75,21 +76,21 @@
         .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
         .nav-left { display:flex; align-items:center; }
         .logo { font-size:20px; font-weight:700; color:var(--text-primary); text-decoration:none; letter-spacing:-0.02em; }
-        .logo span { color:var(--rail-purple); }
+        .logo span { color:var(--rail-accent-light); }
         .nav-center { display:flex; align-items:center; gap:4px; }
         .nav-right { display:flex; align-items:center; gap:8px; }
         .nav-link { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:500; padding:8px 16px; border-radius:var(--r-sm); transition:all 0.2s; }
         .nav-link:hover { color:var(--text-primary); }
 
-        .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--rail-purple); color:#fff; padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:600; font-family:'Inter', sans-serif; text-decoration:none; border:none; cursor:pointer; transition:all 0.25s; }
-        .btn-primary:hover { background:var(--rail-purple-hover); box-shadow:0 4px 12px rgba(108,76,237,0.25); transform:translateY(-1px); }
+        .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--rail-accent); color:#fff; padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:600; font-family:'Inter', sans-serif; text-decoration:none; border:1px solid rgba(71,212,160,0.2); cursor:pointer; transition:all 0.25s; }
+        .btn-primary:hover { background:var(--rail-accent-hover); box-shadow:0 4px 12px rgba(48,60,64,0.4); transform:translateY(-1px); }
         .btn-primary .arrow { display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:rgba(255,255,255,0.15); border-radius:4px; font-size:12px; }
         .btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--text-primary); padding:10px 22px; border-radius:var(--r-sm); font-size:14px; font-weight:600; font-family:'Inter', sans-serif; text-decoration:none; border:1px solid var(--border-hover); cursor:pointer; transition:all 0.25s; }
         .btn-outline:hover { border-color:rgba(255,255,255,0.18); background:rgba(255,255,255,0.04); }
 
         /* FEATURED TOPBAR */
         .featured-topbar { position:fixed; top:0; left:0; right:0; z-index:101; background:var(--rail-bg-card); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; gap:16px; padding:6px 24px; font-size:13px; }
-        .featured-topbar .badge { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:var(--rail-purple); padding:3px 10px; border-radius:var(--r-full); border:none; white-space:nowrap; }
+        .featured-topbar .badge { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#fff; background:var(--rail-accent); padding:3px 10px; border-radius:var(--r-full); border:1px solid rgba(71,212,160,0.2); white-space:nowrap; }
         .featured-topbar .source { font-size:14px; font-weight:700; color:var(--text-primary); }
         .featured-topbar .quote { font-size:13px; color:var(--text-secondary); font-style:italic; }
         .featured-topbar .read-link { color:var(--text-secondary); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:color 0.2s; }
@@ -143,7 +144,7 @@
         .hero-tag .dot { width:8px; height:8px; border-radius:50%; background:var(--rail-green); box-shadow:0 0 8px var(--rail-green); animation:pulse 2s infinite; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
         .hero h1 { font-size:clamp(36px,4.5vw,56px); font-weight:700; letter-spacing:-0.03em; line-height:1.08; margin-bottom:20px; }
-        .hero h1 .highlight { color:var(--rail-purple); }
+        .hero h1 .highlight { color:var(--rail-accent-light); }
         .hero-desc { font-size:17px; color:var(--text-secondary); max-width:480px; line-height:1.7; margin-bottom:36px; }
         .hero-cta { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
         .hero-illustration { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; }
@@ -180,7 +181,7 @@
 
         /* Step indicator */
         .demo-step { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
-        .demo-step-num { width:24px; height:24px; border-radius:50%; background:var(--rail-purple); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; }
+        .demo-step-num { width:24px; height:24px; border-radius:50%; background:var(--rail-accent); color:var(--rail-accent-light); display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; }
         .demo-step-label { font-size:13px; font-weight:600; color:var(--text-primary); text-transform:uppercase; letter-spacing:0.06em; }
 
         /* Form elements in panel 1 */
@@ -190,7 +191,7 @@
         .demo-form-input.filled { border-color:rgba(255,255,255,0.15); }
         .demo-form-textarea { background:var(--rail-bg-elevated); border:1px solid var(--border); border-radius:6px; padding:10px 12px; font-size:12px; color:var(--text-secondary); font-family:monospace; width:100%; min-height:60px; display:block; line-height:1.5; }
         .demo-form-textarea.filled { border-color:rgba(255,255,255,0.15); }
-        .demo-form-btn { display:inline-flex; align-items:center; gap:6px; background:var(--rail-purple); color:#fff; padding:8px 16px; border-radius:6px; font-size:12px; font-weight:700; border:none; margin-top:8px; }
+        .demo-form-btn { display:inline-flex; align-items:center; gap:6px; background:var(--rail-accent); color:#fff; padding:8px 16px; border-radius:6px; font-size:12px; font-weight:700; border:none; margin-top:8px; }
 
         /* Analysis panel 2 */
         .demo-analysis-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid var(--border); }
@@ -208,7 +209,7 @@
         .demo-progress { margin-top:14px; }
         .demo-progress-label { font-size:11px; color:var(--text-tertiary); margin-bottom:6px; }
         .demo-progress-bar { height:4px; background:var(--rail-bg-elevated); border-radius:2px; overflow:hidden; }
-        .demo-progress-fill { height:100%; background:var(--rail-purple); border-radius:2px; width:0%; transition:width 2s ease-out; }
+        .demo-progress-fill { height:100%; background:var(--rail-accent-light); border-radius:2px; width:0%; transition:width 2s ease-out; }
         .demo-progress-fill.animate { width:100%; }
 
         /* Email panel 3 */
@@ -247,7 +248,7 @@
         .section-label { display:inline-flex; align-items:center; padding:6px 16px; border-radius:var(--r-full); border:1px solid rgba(255,255,255,0.12); background:transparent; font-size:13px; font-weight:600; color:var(--text-secondary); margin-bottom:20px; }
         .section-label.accent-green { border-color:rgba(71,212,160,0.25); color:var(--rail-green); }
         .section-header h2 { font-size:clamp(28px,3.5vw,42px); font-weight:700; letter-spacing:-0.03em; line-height:1.15; margin-bottom:12px; }
-        .section-header h2 .highlight { color:var(--rail-purple); }
+        .section-header h2 .highlight { color:var(--rail-accent-light); }
         .section-header p { font-size:16px; color:var(--text-secondary); max-width:560px; margin:0 auto; }
 
         /* EXPERTS CAROUSEL */
@@ -293,12 +294,12 @@
         .steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
         .step-card { background:var(--rail-bg-card); border:1px solid var(--border-card); border-radius:var(--r-lg); padding:32px 24px; text-align:center; transition:all 0.35s cubic-bezier(0.16,1,0.3,1); }
         .step-card:hover { border-color:var(--border-hover); transform:translateY(-2px); }
-        .step-number { width:36px; height:36px; border-radius:50%; background:var(--rail-purple); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:15px; font-weight:700; margin-bottom:20px; }
+        .step-number { width:36px; height:36px; border-radius:50%; background:var(--rail-accent); color:var(--rail-accent-light); display:inline-flex; align-items:center; justify-content:center; font-size:15px; font-weight:700; margin-bottom:20px; }
         .step-card h3 { font-size:17px; font-weight:600; margin-bottom:8px; }
         .step-card p { font-size:14px; color:var(--text-secondary); line-height:1.6; margin-bottom:20px; }
         .btn-sm { display:inline-flex; align-items:center; gap:4px; padding:8px 16px; border-radius:var(--r-sm); font-size:13px; font-weight:600; text-decoration:none; transition:all 0.2s; }
-        .btn-sm-green { background:var(--rail-purple); color:#fff; }
-        .btn-sm-green:hover { background:var(--rail-purple-hover); }
+        .btn-sm-green { background:var(--rail-accent); color:#fff; border:1px solid rgba(71,212,160,0.2); }
+        .btn-sm-green:hover { background:var(--rail-accent-hover); }
         .btn-sm-ghost { background:transparent; color:var(--text-secondary); border:1px solid var(--border-hover); }
         .btn-sm-ghost:hover { border-color:rgba(255,255,255,0.18); color:var(--text-primary); }
         .btn-sm-accent { background:rgba(255,255,255,0.04); color:var(--text-secondary); border:1px solid var(--border-hover); }
@@ -316,7 +317,7 @@
         .join-content p { font-size:15px; color:var(--text-secondary); line-height:1.7; margin-bottom:28px; }
         .join-content p strong { color:var(--text-primary); }
         .expert-counter { display:flex; align-items:center; gap:12px; background:var(--rail-bg-card); border:1px solid var(--border-card); padding:16px 24px; border-radius:var(--r-lg); margin-top:24px; }
-        .expert-counter .count { font-size:24px; font-weight:700; color:var(--rail-purple); }
+        .expert-counter .count { font-size:24px; font-weight:700; color:var(--rail-accent-light); }
         .expert-counter .count-label { font-size:14px; color:var(--text-secondary); }
 
         /* FAQ */
@@ -1067,7 +1068,7 @@
                     <a href="javascript:void(0)" class="logo">Vibe<span>CodeFixers</span></a>
                     <p>Connecting VibeCoders and projects for better code solutions. We help VibeCoders launch their dream apps.</p>
                     <p style="margin-top:16px; font-size:13px; color:var(--text-tertiary);">Have custom project needs or fasttrack services? Drop a message (response time maximum 12 hours)</p>
-                    <a href="mailto:contact@vibecodefixers.com" style="color:var(--rail-purple); font-size:14px; text-decoration:none; margin-top:8px; display:inline-block;">contact@vibecodefixers.com</a>
+                    <a href="mailto:contact@vibecodefixers.com" style="color:var(--rail-accent-light); font-size:14px; text-decoration:none; margin-top:8px; display:inline-block;">contact@vibecodefixers.com</a>
                 </div>
                 <div class="footer-col"><h4>Pages</h4><a href="javascript:void(0)">Home</a><a href="javascript:void(0)">Find Experts</a><a href="javascript:void(0)">Blog</a><a href="javascript:void(0)">Contact</a></div>
                 <div class="footer-col"><h4>Community</h4><a href="javascript:void(0)">Discord</a><a href="javascript:void(0)">r/vibecodingcommunity</a><a href="javascript:void(0)">Join as Expert</a></div>
