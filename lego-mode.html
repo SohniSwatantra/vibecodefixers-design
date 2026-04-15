@@ -67,12 +67,12 @@
         .reveal-delay-3 { transition-delay:0.3s; } .reveal-delay-4 { transition-delay:0.4s; }
 
         /* NAV — Lego beam style */
-        nav { position:fixed; top:32px; left:0; right:0; z-index:100; background:var(--lego-blue); box-shadow:0 4px 0 var(--lego-blue-dark); transition:all 0.3s; }
+        nav { position:fixed; top:102px; left:0; right:0; z-index:99; background:var(--lego-blue); box-shadow:0 4px 0 var(--lego-blue-dark); transition:all 0.3s; }
         .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
         .nav-left { display:flex; align-items:center; }
-        .logo { display:inline-flex; align-items:center; text-decoration:none; }
-        .logo span { display:none; }
-        .logo-icon { height:48px; width:auto; border-radius:4px; box-shadow:0 2px 0 rgba(0,0,0,0.15); }
+        .logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-heading); font-size:20px; font-weight:900; color:#fff; text-decoration:none; letter-spacing:-0.02em; }
+        .logo span { color:var(--lego-yellow); }
+        .logo-icon { height:36px; width:auto; border-radius:4px; }
         .nav-center { display:flex; align-items:center; gap:4px; }
         .nav-right { display:flex; align-items:center; gap:8px; }
         .nav-link { color:rgba(255,255,255,0.8); text-decoration:none; font-size:14px; font-weight:700; padding:8px 16px; border-radius:4px; transition:all 0.2s; }
@@ -91,6 +91,11 @@
         nav .btn-outline { border-color:rgba(255,255,255,0.5); color:#fff; }
         nav .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,0.1); }
 
+        /* BRAND STRIP */
+        .brand-strip { position:fixed; top:32px; left:0; right:0; z-index:100; background:var(--lego-blue-dark); display:flex; align-items:center; justify-content:center; gap:16px; padding:10px 24px; border-bottom:2px solid rgba(255,255,255,0.08); }
+        .brand-strip-logo { height:48px; width:auto; border-radius:4px; box-shadow:0 2px 4px rgba(0,0,0,0.2); }
+        .brand-strip-text { font-family:var(--font-heading); font-size:11px; font-weight:700; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.1em; }
+
         /* FEATURED TOPBAR */
         .featured-topbar { position:fixed; top:0; left:0; right:0; z-index:101; background:var(--lego-red); border-bottom:none; display:flex; align-items:center; justify-content:center; gap:16px; padding:6px 24px; font-size:13px; color:#fff; }
         .featured-topbar .badge { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--lego-text-primary); background:var(--lego-yellow); padding:3px 10px; border-radius:4px; border:none; white-space:nowrap; }
@@ -100,7 +105,7 @@
         .featured-topbar .read-link:hover { text-decoration:underline; }
 
         /* HERO */
-        .hero { padding:150px 0 0; position:relative; overflow:hidden; background:var(--lego-blue); }
+        .hero { padding:220px 0 0; position:relative; overflow:hidden; background:var(--lego-blue); }
         .hero::after {
             content:''; position:absolute; inset:0;
             background-image: radial-gradient(circle, rgba(255,255,255,0.06) 4px, transparent 4px);
@@ -354,7 +359,9 @@
         .footer-col a { display:block; font-size:14px; color:rgba(255,255,255,0.6); text-decoration:none; padding:3px 0; transition:color 0.2s; }
         .footer-col a:hover { color:var(--lego-yellow); }
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; display:flex; align-items:center; justify-content:space-between; font-size:13px; color:rgba(255,255,255,0.5); }
-        footer .logo-icon { height:56px; }
+        footer .logo { color:#fff; }
+        footer .logo span { color:var(--lego-yellow); }
+        footer .logo-icon { height:32px; }
         footer a[href^="mailto"] { color:var(--lego-yellow); }
 
         /* RESPONSIVE */
@@ -380,7 +387,7 @@
             /* Nav — compact mobile */
             nav { top:28px; height:auto; }
             .nav-inner { height:52px; padding:0 16px; }
-            .logo-icon { height:40px; }
+            .logo { font-size:17px; }
             .nav-right { gap:4px; }
             .nav-right .btn-outline { display:none; }
             .btn-primary { padding:8px 14px; font-size:13px; }
@@ -388,7 +395,11 @@
             .nav-link { padding:6px 10px; font-size:13px; }
 
             /* Hero */
-            .hero { padding:110px 0 0; }
+            .hero { padding:180px 0 0; }
+            .brand-strip { padding:8px 16px; gap:10px; }
+            .brand-strip-logo { height:36px; }
+            .brand-strip-text { font-size:10px; }
+            nav { top:86px; }
             .hero h1 { font-size:28px; }
             .hero-desc { font-size:15px; }
             .hero-tag { font-size:12px; padding:5px 14px; margin-bottom:20px; }
@@ -452,6 +463,12 @@
         <span class="source">404 MEDIA</span>
         <span class="quote">"The Software Engineers Paid to Fix Vibe Coded Messes"</span>
         <a href="javascript:void(0)" class="read-link">Read Article &rarr;</a>
+    </div>
+
+    <!-- BRAND STRIP -->
+    <div class="brand-strip">
+        <img src="Marketing images/vibecodefixers-wave-logo.jpeg" alt="VibeCodeFixers" class="brand-strip-logo">
+        <span class="brand-strip-text">Fix. Secure. Optimize.</span>
     </div>
 
     <!-- NAV -->
