@@ -457,7 +457,7 @@
     <nav>
         <div class="nav-inner">
             <div class="nav-left">
-                <a href="javascript:void(0)" class="logo"><img src="Marketing images/vibecodefixers-wave-logo.jpeg" alt="VCF" class="logo-icon">Vibe<span>CodeFixers</span></a>
+                <a href="javascript:void(0)" class="logo"><img src="Marketing images/vibecodefixers-wave-logo.jpeg" alt="VCF" class="logo-icon"><span>VibeCodeFixers</span></a>
             </div>
             <div class="nav-center">
                 <a href="javascript:void(0)" class="nav-link">Find Experts</a>
@@ -744,47 +744,41 @@
                 <div class="why-card reveal reveal-delay-1">
                     <div class="why-card-graphic">
                         <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
-                            <pattern id="wg1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(0,85,191,0.06)"/></pattern>
-                            <rect width="400" height="200" fill="url(#wg1)"/>
+                            <rect width="400" height="200" fill="rgba(0,0,0,0.01)"/>
                             <!-- Circuit traces -->
-                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="rgba(0,85,191,0.12)" stroke-width="1" fill="none"/>
-                            <path d="M0 100 H30 V150 Q30 160 40 160 H80" stroke="rgba(0,85,191,0.12)" stroke-width="1" fill="none"/>
-                            <path d="M310 0 V30 Q310 40 320 40 H370" stroke="rgba(0,85,191,0.12)" stroke-width="1" fill="none"/>
-                            <path d="M340 170 H400" stroke="rgba(0,85,191,0.12)" stroke-width="1" fill="none"/>
-                            <!-- Animated trace -->
-                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="#FFD700" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="8 16"><animate attributeName="stroke-dashoffset" from="0" to="-48" dur="3s" repeatCount="indefinite"/></path>
-                            <!-- Blue dots -->
-                            <circle cx="50" cy="60" r="2" fill="#2979D6" opacity="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></circle>
-                            <circle cx="310" cy="40" r="2" fill="#2979D6" opacity="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.7s" repeatCount="indefinite"/></circle>
-                            <!-- Code editor mini -->
-                            <rect x="100" y="24" width="200" height="152" rx="4" stroke="rgba(0,85,191,0.15)" stroke-width="1" fill="none"/>
-                            <rect x="106" y="30" width="188" height="140" rx="4" stroke="rgba(0,85,191,0.08)" stroke-width="0.8" fill="none"/>
-                            <!-- Title bar -->
-                            <line x1="106" y1="48" x2="294" y2="48" stroke="rgba(0,0,0,0.08)"/>
-                            <circle cx="118" cy="39" r="3" stroke="rgba(0,0,0,0.15)" fill="none"/>
-                            <circle cx="128" cy="39" r="3" stroke="rgba(0,0,0,0.15)" fill="none"/>
-                            <circle cx="138" cy="39" r="3" stroke="rgba(0,0,0,0.15)" fill="none"/>
+                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="rgba(0,85,191,0.25)" stroke-width="1.5" fill="none"/>
+                            <path d="M0 100 H30 V150 Q30 160 40 160 H80" stroke="rgba(0,85,191,0.25)" stroke-width="1.5" fill="none"/>
+                            <path d="M310 0 V30 Q310 40 320 40 H370" stroke="rgba(0,85,191,0.25)" stroke-width="1.5" fill="none"/>
+                            <path d="M340 170 H400" stroke="rgba(0,85,191,0.25)" stroke-width="1.5" fill="none"/>
+                            <path d="M0 60 H40 Q50 60 50 70 V110 Q50 120 60 120 H90" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.5" stroke-dasharray="8 16"><animate attributeName="stroke-dashoffset" from="0" to="-48" dur="3s" repeatCount="indefinite"/></path>
+                            <circle cx="50" cy="60" r="3" fill="#FFD700" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
+                            <circle cx="310" cy="40" r="3" fill="#2979D6" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.7s" repeatCount="indefinite"/></circle>
+                            <!-- Code editor -->
+                            <rect x="100" y="24" width="200" height="152" rx="4" stroke="rgba(0,85,191,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.5)"/>
+                            <rect x="106" y="30" width="188" height="140" rx="4" stroke="rgba(0,85,191,0.15)" stroke-width="1" fill="none"/>
+                            <line x1="106" y1="48" x2="294" y2="48" stroke="rgba(0,0,0,0.12)"/>
+                            <circle cx="118" cy="39" r="3" fill="#D11013" opacity="0.6"/><circle cx="128" cy="39" r="3" fill="#FFD700" opacity="0.6"/><circle cx="138" cy="39" r="3" fill="#00852B" opacity="0.6"/>
                             <!-- Code lines -->
-                            <rect x="118" y="58" width="50" height="5" rx="2" fill="rgba(0,85,191,0.25)"/>
-                            <rect x="174" y="58" width="70" height="5" rx="2" fill="rgba(0,0,0,0.08)"/>
-                            <rect x="118" y="72" width="35" height="5" rx="2" fill="rgba(0,0,0,0.06)"/>
-                            <rect x="158" y="72" width="60" height="5" rx="2" fill="rgba(0,0,0,0.08)"/>
-                            <!-- Bug line (red strikethrough) -->
-                            <rect x="112" y="86" width="176" height="18" rx="3" fill="rgba(209,16,19,0.06)" stroke="rgba(209,16,19,0.12)"/>
-                            <rect x="118" y="92" width="40" height="5" rx="2" fill="rgba(209,16,19,0.3)"/>
-                            <rect x="164" y="92" width="60" height="5" rx="2" fill="rgba(0,0,0,0.06)"/>
-                            <line x1="118" y1="94.5" x2="224" y2="94.5" stroke="rgba(209,16,19,0.4)" stroke-width="0.7"/>
-                            <!-- Fix line (green) -->
-                            <rect x="112" y="110" width="176" height="18" rx="3" fill="rgba(0,133,43,0.06)" stroke="rgba(0,133,43,0.12)"/>
-                            <text x="116" y="122" fill="#00852B" font-size="10" font-family="monospace" opacity="0.5">+</text>
-                            <rect x="128" y="116" width="40" height="5" rx="2" fill="rgba(0,133,43,0.35)"/>
-                            <rect x="174" y="116" width="70" height="5" rx="2" fill="rgba(0,0,0,0.08)"/>
-                            <!-- Terminal checks -->
-                            <line x1="106" y1="136" x2="294" y2="136" stroke="rgba(0,0,0,0.06)"/>
-                            <text x="116" y="152" fill="rgba(0,133,43,0.6)" font-size="9" font-family="monospace">&#10003;</text>
-                            <rect x="130" y="146" width="80" height="4" rx="2" fill="rgba(0,133,43,0.12)"/>
-                            <text x="116" y="164" fill="rgba(0,133,43,0.6)" font-size="9" font-family="monospace">&#10003;</text>
-                            <rect x="130" y="158" width="60" height="4" rx="2" fill="rgba(0,133,43,0.12)"/>
+                            <rect x="118" y="58" width="50" height="5" rx="2" fill="rgba(41,121,214,0.5)"/>
+                            <rect x="174" y="58" width="70" height="5" rx="2" fill="rgba(0,0,0,0.12)"/>
+                            <rect x="118" y="72" width="35" height="5" rx="2" fill="rgba(0,0,0,0.1)"/>
+                            <rect x="158" y="72" width="60" height="5" rx="2" fill="rgba(0,0,0,0.12)"/>
+                            <!-- Bug line -->
+                            <rect x="112" y="86" width="176" height="18" rx="3" fill="rgba(209,16,19,0.1)" stroke="rgba(209,16,19,0.3)" stroke-width="1"/>
+                            <rect x="118" y="92" width="40" height="5" rx="2" fill="rgba(209,16,19,0.5)"/>
+                            <rect x="164" y="92" width="60" height="5" rx="2" fill="rgba(0,0,0,0.1)"/>
+                            <line x1="118" y1="94.5" x2="224" y2="94.5" stroke="rgba(209,16,19,0.6)" stroke-width="1"/>
+                            <!-- Fix line -->
+                            <rect x="112" y="110" width="176" height="18" rx="3" fill="rgba(0,133,43,0.1)" stroke="rgba(0,133,43,0.3)" stroke-width="1"/>
+                            <text x="116" y="122" fill="#00852B" font-size="10" font-family="monospace" opacity="0.8">+</text>
+                            <rect x="128" y="116" width="40" height="5" rx="2" fill="rgba(0,133,43,0.55)"/>
+                            <rect x="174" y="116" width="70" height="5" rx="2" fill="rgba(0,0,0,0.12)"/>
+                            <!-- Terminal -->
+                            <line x1="106" y1="136" x2="294" y2="136" stroke="rgba(0,0,0,0.1)"/>
+                            <text x="116" y="152" fill="#00852B" font-size="9" font-family="monospace" opacity="0.8">&#10003;</text>
+                            <rect x="130" y="146" width="80" height="4" rx="2" fill="rgba(0,133,43,0.25)"/>
+                            <text x="116" y="164" fill="#00852B" font-size="9" font-family="monospace" opacity="0.8">&#10003;</text>
+                            <rect x="130" y="158" width="60" height="4" rx="2" fill="rgba(0,133,43,0.25)"/>
                         </svg>
                     </div>
                     <div class="why-card-content"><h3>Bug Fixing</h3><p>Expert developers identify and fix critical issues in your code with surgical precision and rapid response times.</p></div>
@@ -806,22 +800,22 @@
                             <circle cx="70" cy="80" r="2" fill="#FFD700" opacity="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></circle>
                             <circle cx="350" cy="60" r="2" fill="#FFD700" opacity="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
                             <!-- Shield -->
-                            <path d="M200 30 L240 45 V90 C240 120 200 145 200 145 C200 145 160 120 160 90 V45 Z" stroke="rgba(0,85,191,0.2)" stroke-width="1.5" fill="none"/>
-                            <path d="M200 38 L232 50 V88 C232 112 200 134 200 134 C200 134 168 112 168 88 V50 Z" stroke="rgba(0,85,191,0.15)" stroke-width="0.8" fill="rgba(0,85,191,0.03)"/>
+                            <path d="M200 30 L240 45 V90 C240 120 200 145 200 145 C200 145 160 120 160 90 V45 Z" stroke="rgba(41,121,214,0.5)" stroke-width="2.5" fill="rgba(41,121,214,0.06)"/>
+                            <path d="M200 38 L232 50 V88 C232 112 200 134 200 134 C200 134 168 112 168 88 V50 Z" stroke="rgba(41,121,214,0.3)" stroke-width="1" fill="rgba(41,121,214,0.04)"/>
                             <!-- Checkmark inside shield -->
-                            <path d="M185 85 L195 95 L218 70" stroke="#00852B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"><animate attributeName="stroke-dashoffset" from="50" to="0" dur="1.5s" begin="1s" fill="freeze"/></path>
-                            <!-- Scan lines around shield -->
-                            <rect x="140" y="55" width="10" height="1" fill="rgba(255,215,0,0.3)"><animate attributeName="x" values="140;148;140" dur="2s" repeatCount="indefinite"/></rect>
-                            <rect x="250" y="75" width="10" height="1" fill="rgba(255,215,0,0.3)"><animate attributeName="x" values="250;258;250" dur="2s" begin="0.5s" repeatCount="indefinite"/></rect>
-                            <rect x="145" y="105" width="8" height="1" fill="rgba(255,215,0,0.2)"><animate attributeName="x" values="145;150;145" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></rect>
-                            <rect x="252" y="95" width="8" height="1" fill="rgba(255,215,0,0.2)"><animate attributeName="x" values="252;258;252" dur="1.8s" begin="0.8s" repeatCount="indefinite"/></rect>
+                            <path d="M185 85 L195 95 L218 70" stroke="#00852B" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"><animate attributeName="stroke-dashoffset" from="50" to="0" dur="1.5s" begin="1s" fill="freeze"/></path>
+                            <!-- Scan lines -->
+                            <rect x="140" y="55" width="12" height="2" rx="1" fill="rgba(255,215,0,0.6)"><animate attributeName="x" values="140;150;140" dur="2s" repeatCount="indefinite"/></rect>
+                            <rect x="250" y="75" width="12" height="2" rx="1" fill="rgba(255,215,0,0.6)"><animate attributeName="x" values="250;260;250" dur="2s" begin="0.5s" repeatCount="indefinite"/></rect>
+                            <rect x="145" y="105" width="10" height="2" rx="1" fill="rgba(255,215,0,0.4)"><animate attributeName="x" values="145;152;145" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></rect>
+                            <rect x="252" y="95" width="10" height="2" rx="1" fill="rgba(255,215,0,0.4)"><animate attributeName="x" values="252;260;252" dur="1.8s" begin="0.8s" repeatCount="indefinite"/></rect>
                             <!-- Vulnerability list -->
-                            <rect x="118" y="158" width="6" height="6" rx="1" fill="rgba(0,133,43,0.2)" stroke="rgba(0,133,43,0.3)"/>
-                            <rect x="130" y="160" width="50" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
-                            <rect x="200" y="158" width="6" height="6" rx="1" fill="rgba(0,133,43,0.2)" stroke="rgba(0,133,43,0.3)"/>
-                            <rect x="212" y="160" width="40" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
-                            <rect x="268" y="158" width="6" height="6" rx="1" fill="rgba(255,215,0,0.2)" stroke="rgba(255,215,0,0.3)"/>
-                            <rect x="280" y="160" width="35" height="3" rx="1" fill="rgba(0,0,0,0.05)"/>
+                            <rect x="118" y="158" width="8" height="8" rx="1" fill="rgba(0,133,43,0.4)" stroke="rgba(0,133,43,0.6)"/>
+                            <rect x="132" y="160" width="50" height="4" rx="1" fill="rgba(0,0,0,0.1)"/>
+                            <rect x="200" y="158" width="8" height="8" rx="1" fill="rgba(0,133,43,0.4)" stroke="rgba(0,133,43,0.6)"/>
+                            <rect x="214" y="160" width="40" height="4" rx="1" fill="rgba(0,0,0,0.1)"/>
+                            <rect x="268" y="158" width="8" height="8" rx="1" fill="rgba(255,215,0,0.4)" stroke="rgba(255,215,0,0.6)"/>
+                            <rect x="282" y="160" width="35" height="4" rx="1" fill="rgba(0,0,0,0.08)"/>
                         </svg>
                     </div>
                     <div class="why-card-content"><h3>Security Analysis</h3><p>Comprehensive vulnerability assessments and security improvements to protect your application from threats.</p></div>
@@ -843,42 +837,42 @@
                             <circle cx="50" cy="140" r="2" fill="#2979D6" opacity="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></circle>
                             <!-- CI/CD Pipeline -->
                             <!-- Stage 1: Build -->
-                            <rect x="110" y="40" width="70" height="36" rx="4" stroke="rgba(0,85,191,0.15)" fill="rgba(0,85,191,0.03)"/>
-                            <text x="128" y="54" fill="rgba(0,85,191,0.6)" font-family="monospace" font-size="8">BUILD</text>
-                            <rect x="122" y="62" width="46" height="4" rx="2" fill="rgba(0,133,43,0.2)"/>
-                            <text x="148" y="53" fill="#00852B" font-size="8" text-anchor="middle" opacity="0.6">&#10003;</text>
+                            <rect x="110" y="40" width="70" height="36" rx="4" stroke="rgba(41,121,214,0.4)" stroke-width="1.5" fill="rgba(41,121,214,0.06)"/>
+                            <text x="128" y="54" fill="rgba(41,121,214,0.9)" font-family="monospace" font-size="8" font-weight="bold">BUILD</text>
+                            <rect x="122" y="62" width="46" height="5" rx="2" fill="rgba(0,133,43,0.4)"/>
+                            <text x="148" y="53" fill="#00852B" font-size="9" text-anchor="middle" opacity="0.9">&#10003;</text>
                             <!-- Arrow -->
-                            <line x1="184" y1="58" x2="206" y2="58" stroke="rgba(0,85,191,0.2)" stroke-width="1.5"/>
-                            <circle cx="206" cy="58" r="2" fill="#2979D6" opacity="0.5"><animate attributeName="cx" values="184;206" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <line x1="184" y1="58" x2="206" y2="58" stroke="rgba(41,121,214,0.4)" stroke-width="2"/>
+                            <circle cx="206" cy="58" r="3" fill="#FFD700" opacity="0.6"><animate attributeName="cx" values="184;206" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/></circle>
                             <!-- Stage 2: Test -->
-                            <rect x="210" y="40" width="70" height="36" rx="4" stroke="rgba(0,85,191,0.15)" fill="rgba(0,85,191,0.03)"/>
-                            <text x="232" y="54" fill="rgba(0,85,191,0.6)" font-family="monospace" font-size="8">TEST</text>
-                            <rect x="222" y="62" width="46" height="4" rx="2" fill="rgba(0,133,43,0.2)"/>
-                            <text x="248" y="53" fill="#00852B" font-size="8" text-anchor="middle" opacity="0.6">&#10003;</text>
+                            <rect x="210" y="40" width="70" height="36" rx="4" stroke="rgba(41,121,214,0.4)" stroke-width="1.5" fill="rgba(41,121,214,0.06)"/>
+                            <text x="232" y="54" fill="rgba(41,121,214,0.9)" font-family="monospace" font-size="8" font-weight="bold">TEST</text>
+                            <rect x="222" y="62" width="46" height="5" rx="2" fill="rgba(0,133,43,0.4)"/>
+                            <text x="248" y="53" fill="#00852B" font-size="9" text-anchor="middle" opacity="0.9">&#10003;</text>
                             <!-- Arrow -->
-                            <line x1="184" y1="120" x2="206" y2="120" stroke="rgba(0,85,191,0.2)" stroke-width="1.5"/>
+                            <line x1="184" y1="120" x2="206" y2="120" stroke="rgba(41,121,214,0.35)" stroke-width="2"/>
                             <!-- Stage 3: Deploy -->
-                            <rect x="160" y="90" width="80" height="46" rx="4" stroke="rgba(0,85,191,0.25)" stroke-width="1.5" fill="rgba(0,85,191,0.04)"/>
-                            <text x="183" y="108" fill="rgba(0,85,191,0.8)" font-family="monospace" font-size="9" font-weight="bold">DEPLOY</text>
-                            <rect x="175" y="118" width="50" height="5" rx="2" fill="rgba(0,85,191,0.25)"/>
+                            <rect x="160" y="90" width="80" height="46" rx="4" stroke="rgba(41,121,214,0.5)" stroke-width="2" fill="rgba(41,121,214,0.08)"/>
+                            <text x="183" y="108" fill="#2979D6" font-family="monospace" font-size="9" font-weight="bold">DEPLOY</text>
+                            <rect x="175" y="118" width="50" height="5" rx="2" fill="rgba(41,121,214,0.4)"/>
                             <!-- Rocket -->
-                            <g transform="translate(200, 155)" opacity="0.7">
-                                <path d="M0 -12 C0 -18 4 -22 4 -28 C4 -22 8 -18 8 -12 Z" stroke="#2979D6" stroke-width="1" fill="rgba(0,85,191,0.1)"/>
-                                <rect x="1" y="-12" width="6" height="8" rx="1" stroke="#2979D6" stroke-width="0.8" fill="none"/>
-                                <path d="M0 -4 L-3 2 H3 Z" fill="rgba(0,85,191,0.2)"/>
-                                <path d="M8 -4 L11 2 H5 Z" fill="rgba(0,85,191,0.2)"/>
+                            <g transform="translate(200, 155)" opacity="0.9">
+                                <path d="M0 -12 C0 -18 4 -22 4 -28 C4 -22 8 -18 8 -12 Z" stroke="#2979D6" stroke-width="1.5" fill="rgba(41,121,214,0.15)"/>
+                                <rect x="1" y="-12" width="6" height="8" rx="1" stroke="#2979D6" stroke-width="1" fill="none"/>
+                                <path d="M0 -4 L-3 2 H3 Z" fill="rgba(41,121,214,0.3)"/>
+                                <path d="M8 -4 L11 2 H5 Z" fill="rgba(41,121,214,0.3)"/>
                             </g>
                             <!-- Flame particles -->
-                            <circle cx="204" cy="168" r="1.5" fill="#FFD700" opacity="0.4"><animate attributeName="cy" values="168;180" dur="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="0.8s" repeatCount="indefinite"/></circle>
-                            <circle cx="200" cy="170" r="1" fill="#D11013" opacity="0.3"><animate attributeName="cy" values="170;182" dur="0.7s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="0.7s" begin="0.2s" repeatCount="indefinite"/></circle>
+                            <circle cx="204" cy="168" r="2.5" fill="#FFD700" opacity="0.6"><animate attributeName="cy" values="168;180" dur="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="0.8s" repeatCount="indefinite"/></circle>
+                            <circle cx="200" cy="170" r="1.5" fill="#D11013" opacity="0.5"><animate attributeName="cy" values="170;182" dur="0.7s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="0.7s" begin="0.2s" repeatCount="indefinite"/></circle>
                             <!-- Server nodes -->
-                            <rect x="310" y="80" width="50" height="28" rx="4" stroke="rgba(0,85,191,0.1)" fill="none"/>
-                            <circle cx="322" cy="90" r="3" fill="rgba(0,133,43,0.3)"><animate attributeName="fill-opacity" values="0.2;0.6;0.2" dur="1.5s" repeatCount="indefinite"/></circle>
-                            <rect x="330" y="88" width="20" height="3" rx="1" fill="rgba(0,0,0,0.05)"/>
-                            <circle cx="322" cy="100" r="3" fill="rgba(0,133,43,0.3)"><animate attributeName="fill-opacity" values="0.2;0.6;0.2" dur="1.5s" begin="0.3s" repeatCount="indefinite"/></circle>
-                            <rect x="330" y="98" width="16" height="3" rx="1" fill="rgba(0,0,0,0.05)"/>
-                            <!-- Connection from deploy to servers -->
-                            <line x1="244" y1="113" x2="308" y2="94" stroke="rgba(0,85,191,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+                            <rect x="310" y="80" width="50" height="28" rx="4" stroke="rgba(41,121,214,0.3)" stroke-width="1.5" fill="rgba(41,121,214,0.04)"/>
+                            <circle cx="322" cy="90" r="3" fill="#00852B" opacity="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <rect x="330" y="88" width="20" height="3" rx="1" fill="rgba(0,0,0,0.1)"/>
+                            <circle cx="322" cy="100" r="3" fill="#00852B" opacity="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/></circle>
+                            <rect x="330" y="98" width="16" height="3" rx="1" fill="rgba(0,0,0,0.1)"/>
+                            <!-- Connection -->
+                            <line x1="244" y1="113" x2="308" y2="94" stroke="rgba(41,121,214,0.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
                         </svg>
                     </div>
                     <div class="why-card-content"><h3>Deployment &amp; Launch</h3><p>Seamless deployment services ensuring your application launches flawlessly across all environments and platforms.</p></div>
@@ -991,42 +985,39 @@
                 <div class="community-card reveal reveal-delay-1">
                     <div class="community-card-graphic">
                         <svg viewBox="0 0 500 180" fill="none" preserveAspectRatio="xMidYMid slice">
-                            <pattern id="cg1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern>
-                            <rect width="500" height="180" fill="url(#cg1)"/>
-                            <!-- Discord logo shape -->
-                            <g transform="translate(210, 30)">
-                                <rect x="0" y="0" width="80" height="56" rx="4" stroke="#5865F2" stroke-width="1.5" fill="rgba(88,101,242,0.08)"/>
-                                <circle cx="28" cy="32" r="5" fill="#5865F2" opacity="0.7"/>
-                                <circle cx="52" cy="32" r="5" fill="#5865F2" opacity="0.7"/>
-                                <path d="M22 18 Q28 14 34 18" stroke="#5865F2" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                                <path d="M46 18 Q52 14 58 18" stroke="#5865F2" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            <rect width="500" height="180" fill="rgba(255,255,255,0.03)"/>
+                            <!-- Large Discord controller icon -->
+                            <g transform="translate(175, 15)">
+                                <rect x="0" y="10" width="150" height="80" rx="40" stroke="#5865F2" stroke-width="3" fill="rgba(88,101,242,0.12)"/>
+                                <!-- Eyes -->
+                                <circle cx="55" cy="50" r="8" fill="#5865F2" opacity="0.9"/>
+                                <circle cx="95" cy="50" r="8" fill="#5865F2" opacity="0.9"/>
+                                <circle cx="55" cy="48" r="3" fill="#fff" opacity="0.8"/>
+                                <circle cx="95" cy="48" r="3" fill="#fff" opacity="0.8"/>
+                                <!-- Headphone bumps -->
+                                <path d="M30 25 Q40 5 55 15" stroke="#5865F2" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <path d="M120 25 Q110 5 95 15" stroke="#5865F2" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <!-- Mouth -->
+                                <path d="M50 65 Q75 78 100 65" stroke="#5865F2" stroke-width="2" fill="none" stroke-linecap="round"/>
                             </g>
-                            <!-- Chat bubbles floating -->
-                            <rect x="80" y="100" width="100" height="28" rx="4" stroke="rgba(88,101,242,0.2)" fill="rgba(88,101,242,0.06)">
-                                <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+                            <!-- Chat bubbles -->
+                            <rect x="60" y="110" width="110" height="32" rx="4" stroke="#5865F2" stroke-width="1.5" fill="rgba(88,101,242,0.1)">
+                                <animate attributeName="opacity" values="0.3;1;1;0.3" dur="4s" repeatCount="indefinite"/>
                             </rect>
-                            <rect x="92" y="110" width="50" height="4" rx="2" fill="rgba(88,101,242,0.15)"><animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/></rect>
-                            <rect x="92" y="118" width="30" height="4" rx="2" fill="rgba(255,255,255,0.08)"><animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/></rect>
-
-                            <rect x="320" y="95" width="110" height="28" rx="4" stroke="rgba(0,85,191,0.2)" fill="rgba(0,85,191,0.05)">
+                            <rect x="72" y="120" width="55" height="5" rx="2" fill="rgba(88,101,242,0.4)"><animate attributeName="opacity" values="0.3;1;1;0.3" dur="4s" repeatCount="indefinite"/></rect>
+                            <rect x="72" y="130" width="35" height="5" rx="2" fill="rgba(255,255,255,0.25)"><animate attributeName="opacity" values="0.3;1;1;0.3" dur="4s" repeatCount="indefinite"/></rect>
+                            <rect x="330" y="105" width="120" height="32" rx="4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.06)">
                                 <animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/>
                             </rect>
-                            <rect x="332" y="105" width="60" height="4" rx="2" fill="rgba(0,85,191,0.15)"><animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/></rect>
-                            <rect x="332" y="113" width="40" height="4" rx="2" fill="rgba(255,255,255,0.08)"><animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/></rect>
-
-                            <rect x="160" y="135" width="120" height="28" rx="4" stroke="rgba(255,255,255,0.1)" fill="rgba(255,255,255,0.03)">
-                                <animate attributeName="opacity" values="0;0;0;1;1;0" dur="6s" repeatCount="indefinite"/>
-                            </rect>
-                            <rect x="172" y="145" width="55" height="4" rx="2" fill="rgba(255,255,255,0.1)"><animate attributeName="opacity" values="0;0;0;1;1;0" dur="6s" repeatCount="indefinite"/></rect>
-                            <rect x="172" y="153" width="35" height="4" rx="2" fill="rgba(0,85,191,0.12)"><animate attributeName="opacity" values="0;0;0;1;1;0" dur="6s" repeatCount="indefinite"/></rect>
-
+                            <rect x="342" y="115" width="65" height="5" rx="2" fill="rgba(255,255,255,0.35)"><animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/></rect>
+                            <rect x="342" y="125" width="45" height="5" rx="2" fill="rgba(88,101,242,0.3)"><animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/></rect>
                             <!-- Connection lines -->
-                            <line x1="180" y1="114" x2="210" y2="86" stroke="rgba(88,101,242,0.1)" stroke-width="1" stroke-dasharray="3 5"/>
-                            <line x1="290" y1="86" x2="320" y2="109" stroke="rgba(0,85,191,0.1)" stroke-width="1" stroke-dasharray="3 5"/>
+                            <line x1="170" y1="126" x2="205" y2="95" stroke="rgba(88,101,242,0.3)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <line x1="295" y1="95" x2="330" y2="121" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
                             <!-- Floating dots -->
-                            <circle cx="60" cy="40" r="2" fill="#5865F2" opacity="0.3"><animate attributeName="opacity" values="0.15;0.5;0.15" dur="3s" repeatCount="indefinite"/></circle>
-                            <circle cx="440" cy="50" r="2" fill="#2979D6" opacity="0.3"><animate attributeName="opacity" values="0.15;0.5;0.15" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
-                            <circle cx="400" cy="150" r="1.5" fill="#5865F2" opacity="0.2"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="2.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+                            <circle cx="40" cy="30" r="3" fill="#5865F2" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/></circle>
+                            <circle cx="460" cy="40" r="3" fill="#5865F2" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+                            <circle cx="420" cy="155" r="2" fill="#FFD700" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/></circle>
                         </svg>
                     </div>
                     <div class="community-card-content"><h3>Discord Community</h3><p>Join live discussions, code reviews, and connect with experts</p></div>
@@ -1036,51 +1027,50 @@
                 <div class="community-card reveal reveal-delay-2">
                     <div class="community-card-graphic">
                         <svg viewBox="0 0 500 180" fill="none" preserveAspectRatio="xMidYMid slice">
-                            <pattern id="cg2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern>
-                            <rect width="500" height="180" fill="url(#cg2)"/>
-                            <!-- Reddit Snoo head -->
-                            <g transform="translate(215, 20)">
-                                <circle cx="35" cy="38" r="28" stroke="#FF4500" stroke-width="1.5" fill="rgba(255,69,0,0.05)"/>
-                                <circle cx="24" cy="34" r="4" fill="#FF4500" opacity="0.6"/>
-                                <circle cx="46" cy="34" r="4" fill="#FF4500" opacity="0.6"/>
-                                <path d="M22 48 Q35 56 48 48" stroke="#FF4500" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            <rect width="500" height="180" fill="rgba(255,255,255,0.03)"/>
+                            <!-- Large Reddit Snoo -->
+                            <g transform="translate(190, 8)">
+                                <!-- Head -->
+                                <circle cx="60" cy="60" r="42" stroke="#FF4500" stroke-width="3" fill="rgba(255,69,0,0.1)"/>
+                                <!-- Eyes -->
+                                <circle cx="45" cy="55" r="7" fill="#FF4500" opacity="0.9"/>
+                                <circle cx="75" cy="55" r="7" fill="#FF4500" opacity="0.9"/>
+                                <circle cx="45" cy="53" r="2.5" fill="#fff" opacity="0.8"/>
+                                <circle cx="75" cy="53" r="2.5" fill="#fff" opacity="0.8"/>
+                                <!-- Smile -->
+                                <path d="M40 72 Q60 85 80 72" stroke="#FF4500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                                 <!-- Antenna -->
-                                <line x1="35" y1="10" x2="45" y2="2" stroke="#FF4500" stroke-width="1.2"/>
-                                <circle cx="47" cy="1" r="3" fill="#FF4500" opacity="0.4"/>
+                                <line x1="60" y1="18" x2="78" y2="4" stroke="#FF4500" stroke-width="2.5"/>
+                                <circle cx="81" cy="2" r="5" fill="#FF4500" opacity="0.7"/>
                                 <!-- Ears -->
-                                <circle cx="8" cy="22" r="6" stroke="#FF4500" stroke-width="1" fill="none" opacity="0.4"/>
-                                <circle cx="62" cy="22" r="6" stroke="#FF4500" stroke-width="1" fill="none" opacity="0.4"/>
+                                <circle cx="18" cy="35" r="10" stroke="#FF4500" stroke-width="2" fill="rgba(255,69,0,0.08)"/>
+                                <circle cx="102" cy="35" r="10" stroke="#FF4500" stroke-width="2" fill="rgba(255,69,0,0.08)"/>
                             </g>
-                            <!-- Upvote arrows floating -->
-                            <g transform="translate(100, 90)" opacity="0.6">
-                                <path d="M8 12 L0 12 L8 0 L16 12 L8 12" fill="rgba(255,69,0,0.2)" stroke="rgba(255,69,0,0.3)" stroke-width="0.8"/>
-                                <rect x="5" y="12" width="6" height="8" fill="rgba(255,69,0,0.15)"/>
-                                <animate attributeName="opacity" values="0;0.7;0" dur="3s" repeatCount="indefinite"/>
+                            <!-- Upvote arrows -->
+                            <g transform="translate(80, 95)">
+                                <path d="M10 16 L0 16 L10 0 L20 16 L10 16" fill="rgba(255,69,0,0.4)" stroke="#FF4500" stroke-width="1.5"/>
+                                <rect x="6" y="16" width="8" height="12" rx="1" fill="rgba(255,69,0,0.3)"/>
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
                             </g>
-                            <g transform="translate(380, 80)" opacity="0.5">
-                                <path d="M8 12 L0 12 L8 0 L16 12 L8 12" fill="rgba(0,85,191,0.15)" stroke="rgba(0,85,191,0.25)" stroke-width="0.8"/>
-                                <rect x="5" y="12" width="6" height="8" fill="rgba(0,85,191,0.1)"/>
-                                <animate attributeName="opacity" values="0;0.6;0" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+                            <g transform="translate(400, 85)">
+                                <path d="M10 16 L0 16 L10 0 L20 16 L10 16" fill="rgba(255,69,0,0.3)" stroke="#FF4500" stroke-width="1.5"/>
+                                <rect x="6" y="16" width="8" height="12" rx="1" fill="rgba(255,69,0,0.2)"/>
+                                <animate attributeName="opacity" values="0;0.8;0" dur="3.5s" begin="1s" repeatCount="indefinite"/>
                             </g>
                             <!-- Post cards -->
-                            <rect x="70" y="120" width="140" height="40" rx="4" stroke="rgba(255,69,0,0.12)" fill="rgba(255,69,0,0.04)">
-                                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/>
+                            <rect x="55" y="130" width="150" height="36" rx="4" stroke="#FF4500" stroke-width="1.5" fill="rgba(255,69,0,0.08)">
+                                <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
                             </rect>
-                            <rect x="82" y="130" width="60" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
-                            <rect x="82" y="140" width="90" height="3" rx="1" fill="rgba(255,255,255,0.06)"/>
-                            <rect x="82" y="148" width="40" height="3" rx="1" fill="rgba(255,69,0,0.12)"/>
-
-                            <rect x="290" y="115" width="140" height="40" rx="4" stroke="rgba(0,85,191,0.12)" fill="rgba(0,85,191,0.04)">
-                                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4.5s" begin="0.8s" repeatCount="indefinite"/>
+                            <rect x="67" y="140" width="70" height="5" rx="2" fill="rgba(255,255,255,0.3)"/>
+                            <rect x="67" y="150" width="100" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+                            <rect x="300" y="125" width="150" height="36" rx="4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.05)">
+                                <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" begin="0.8s" repeatCount="indefinite"/>
                             </rect>
-                            <rect x="302" y="125" width="70" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
-                            <rect x="302" y="135" width="100" height="3" rx="1" fill="rgba(255,255,255,0.06)"/>
-                            <rect x="302" y="143" width="50" height="3" rx="1" fill="rgba(0,85,191,0.1)"/>
-
+                            <rect x="312" y="135" width="80" height="5" rx="2" fill="rgba(255,255,255,0.3)"/>
+                            <rect x="312" y="145" width="110" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
                             <!-- Floating dots -->
-                            <circle cx="50" cy="50" r="2" fill="#FF4500" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/></circle>
-                            <circle cx="450" cy="40" r="2" fill="#2979D6" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
-                            <circle cx="460" cy="150" r="1.5" fill="#FF4500" opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="2.5s" begin="0.7s" repeatCount="indefinite"/></circle>
+                            <circle cx="35" cy="40" r="3" fill="#FF4500" opacity="0.5"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></circle>
+                            <circle cx="465" cy="35" r="3" fill="#FFD700" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
                         </svg>
                     </div>
                     <div class="community-card-content"><h3>Reddit Community</h3><p>Share projects, get feedback, and learn from the community at r/vibecodingcommunity</p></div>
@@ -1096,7 +1086,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="javascript:void(0)" class="logo"><img src="Marketing images/vibecodefixers-wave-logo.jpeg" alt="VCF" class="logo-icon">Vibe<span>CodeFixers</span></a>
+                    <a href="javascript:void(0)" class="logo"><img src="Marketing images/vibecodefixers-wave-logo.jpeg" alt="VCF" class="logo-icon"><span>VibeCodeFixers</span></a>
                     <p>Connecting VibeCoders and projects for better code solutions. We help VibeCoders launch their dream apps.</p>
                     <p style="margin-top:16px; font-size:13px; color:rgba(255,255,255,0.5);">Have custom project needs or fasttrack services? Drop a message (response time maximum 12 hours)</p>
                     <a href="mailto:contact@vibecodefixers.com" style="color:var(--lego-yellow); font-size:14px; text-decoration:none; margin-top:8px; display:inline-block;">contact@vibecodefixers.com</a>
