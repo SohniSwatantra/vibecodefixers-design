@@ -70,9 +70,9 @@
         nav { position:fixed; top:32px; left:0; right:0; z-index:100; background:var(--lego-blue); box-shadow:0 4px 0 var(--lego-blue-dark); transition:all 0.3s; }
         .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
         .nav-left { display:flex; align-items:center; }
-        .logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-heading); font-size:20px; font-weight:900; color:#fff; text-decoration:none; letter-spacing:-0.02em; }
-        .logo span { color:var(--lego-yellow); }
-        .logo-icon { height:36px; width:auto; border-radius:4px; }
+        .logo { display:inline-flex; align-items:center; text-decoration:none; }
+        .logo span { display:none; }
+        .logo-icon { height:48px; width:auto; border-radius:4px; box-shadow:0 2px 0 rgba(0,0,0,0.15); }
         .nav-center { display:flex; align-items:center; gap:4px; }
         .nav-right { display:flex; align-items:center; gap:8px; }
         .nav-link { color:rgba(255,255,255,0.8); text-decoration:none; font-size:14px; font-weight:700; padding:8px 16px; border-radius:4px; transition:all 0.2s; }
@@ -354,9 +354,7 @@
         .footer-col a { display:block; font-size:14px; color:rgba(255,255,255,0.6); text-decoration:none; padding:3px 0; transition:color 0.2s; }
         .footer-col a:hover { color:var(--lego-yellow); }
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; display:flex; align-items:center; justify-content:space-between; font-size:13px; color:rgba(255,255,255,0.5); }
-        footer .logo { color:#fff; }
-        footer .logo span { color:var(--lego-yellow); }
-        footer .logo-icon { height:32px; }
+        footer .logo-icon { height:56px; }
         footer a[href^="mailto"] { color:var(--lego-yellow); }
 
         /* RESPONSIVE */
@@ -382,7 +380,7 @@
             /* Nav — compact mobile */
             nav { top:28px; height:auto; }
             .nav-inner { height:52px; padding:0 16px; }
-            .logo { font-size:17px; }
+            .logo-icon { height:40px; }
             .nav-right { gap:4px; }
             .nav-right .btn-outline { display:none; }
             .btn-primary { padding:8px 14px; font-size:13px; }
